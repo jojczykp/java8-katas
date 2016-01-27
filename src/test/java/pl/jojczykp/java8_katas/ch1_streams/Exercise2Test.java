@@ -3,24 +3,28 @@ package pl.jojczykp.java8_katas.ch1_streams;
 import org.junit.Test;
 
 import java.io.File;
-import java.net.URISyntaxException;
-import java.nio.file.Paths;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
+import static pl.jojczykp.java8_katas.ch1_streams.MockingFilesTools.aDir;
+import static pl.jojczykp.java8_katas.ch1_streams.MockingFilesTools.aFile;
 
 public class Exercise2Test {
 
 	private Exercise2 testee = new Exercise2();
 
 	@Test
-	public void shouldListAllSubdirsOnly() throws URISyntaxException {
-		String root = getClass().getResource("/").toURI().getPath();
-		File dir = new File(root + Paths.get("ch1_streams", "ex2"));
+	public void shouldListAllSubDirsOnly() {
+		File root =
+				aDir("root",
+						aDir("subDir1"),
+						aDir("subDir2"),
+						aFile("file1.txt"),
+						aFile("file2.txt"));
 
-		Iterable<String> subdirs = testee.listAllSubdirsOnlyIn(dir);
+		Iterable<String> subDirs = testee.listAllSubDirsOnlyIn(root);
 
-		assertThat(subdirs, containsInAnyOrder("dir1", "dir2"));
+		assertThat(subDirs, containsInAnyOrder("subDir1", "subDir2"));
 	}
 
 }
