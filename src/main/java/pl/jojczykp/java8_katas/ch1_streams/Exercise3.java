@@ -8,9 +8,8 @@ import java.util.stream.Collectors;
 public class Exercise3 {
 
 	public Set<String> listFilesByExtensionIn(File dir, String ext) {
-		return Arrays.stream(
-				dir.listFiles((d, name) -> name.endsWith("." + ext)))
-				.map(File::getName)
+		return Arrays.stream(dir.list())
+				.filter(s -> s.endsWith("." + ext))
 				.collect(Collectors.toSet());
 	}
 
