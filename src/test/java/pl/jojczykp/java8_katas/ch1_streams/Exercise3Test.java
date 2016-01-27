@@ -17,34 +17,34 @@ public class Exercise3Test {
 	private Exercise3 testee = new Exercise3();
 
 	@Test
-	public void shouldListFilesByExtension() {
+	public void shouldGetFilesByExtension() {
 		File root = aDir("root",
 				aFile("file1.abc"),
 				aFile("file2.xyz"),
 				aFile("file3.abc"),
 				aFile("file4.xyz"));
 
-		Set<String> files = testee.listFilesByExtensionIn(root, "abc");
+		Set<String> files = testee.getFilesByExtensionIn(root, "abc");
 
 		assertThat(files, containsInAnyOrder("file1.abc", "file3.abc"));
 	}
 
 	@Test
 
-	public void shouldReturnEmptyResultForNonEmptyDirectory() {
+	public void shouldGetEmptyResultForNonEmptyDirectory() {
 		File root = aDir("root",
 				aFile("file1.abc"),
 				aFile("file2.abc"));
 
-		Set<String> subDirs = testee.listFilesByExtensionIn(root, "xyz");
+		Set<String> subDirs = testee.getFilesByExtensionIn(root, "xyz");
 
 		assertThat(subDirs, is(empty()));
 	}
 	@Test
-	public void shouldReturnEmptyResultForEmptyDirectory() {
+	public void shouldGetEmptyResultForEmptyDirectory() {
 		File root = aDir("root");
 
-		Set<String> subDirs = testee.listFilesByExtensionIn(root, "any");
+		Set<String> subDirs = testee.getFilesByExtensionIn(root, "any");
 
 		assertThat(subDirs, is(empty()));
 	}

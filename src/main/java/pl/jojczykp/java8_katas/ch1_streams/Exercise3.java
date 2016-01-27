@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 public class Exercise3 {
 
-	public Set<String> listFilesByExtensionIn(File dir, String ext) {
+	public Set<String> getFilesByExtensionIn(File dir, String ext) {
 		return Stream.of(dir.list())
 				.filter(s -> s.endsWith("." + ext))
 				.collect(Collectors.toSet());

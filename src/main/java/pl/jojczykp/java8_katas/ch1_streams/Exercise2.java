@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 public class Exercise2 {
 
-	public Set<String> listAllSubDirsOnlyIn(File dir) {
+	public Set<String> getAllSubDirsOnlyIn(File dir) {
 		return Stream.of(dir.listFiles(File::isDirectory))
 				.map(File::getName)
 				.collect(Collectors.toSet());

@@ -17,7 +17,7 @@ public class Exercise4Test {
 	private Exercise4 testee = new Exercise4();
 
 	@Test
-	public void shouldListFilesByExtension() {
+	public void shouldGetFilesByExtension() {
 		File root = aDir("root",
 				aDir("subDir2"),
 				aFile("file1.txt"),
@@ -30,7 +30,7 @@ public class Exercise4Test {
 	}
 
 	@Test
-	public void shouldReturnEmptyResult() {
+	public void shouldGetEmptyResult() {
 		File root = aDir("root");
 
 		List<String> subDirs = testee.sort(root);

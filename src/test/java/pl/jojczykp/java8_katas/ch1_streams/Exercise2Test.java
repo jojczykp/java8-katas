@@ -17,23 +17,23 @@ public class Exercise2Test {
 	private Exercise2 testee = new Exercise2();
 
 	@Test
-	public void shouldListAllSubDirsOnly() {
+	public void shouldGetAllSubDirsOnly() {
 		File root = aDir("root",
 				aDir("subDir1"),
 				aDir("subDir2"),
 				aFile("file1.txt"),
 				aFile("file2.txt"));
 
-		Set<String> subDirs = testee.listAllSubDirsOnlyIn(root);
+		Set<String> subDirs = testee.getAllSubDirsOnlyIn(root);
 
 		assertThat(subDirs, containsInAnyOrder("subDir1", "subDir2"));
 	}
 
 	@Test
-	public void shouldReturnEmptyResult() {
+	public void shouldGetEmptyResult() {
 		File root = aDir("root");
 
-		Set<String> subDirs = testee.listAllSubDirsOnlyIn(root);
+		Set<String> subDirs = testee.getAllSubDirsOnlyIn(root);
 
 		assertThat(subDirs, is(empty()));
 	}
