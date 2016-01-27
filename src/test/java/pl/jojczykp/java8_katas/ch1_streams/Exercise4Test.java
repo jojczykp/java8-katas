@@ -7,6 +7,8 @@ import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.empty;
+import static org.hamcrest.Matchers.is;
 import static pl.jojczykp.java8_katas.tools.MockingFilesTools.aDir;
 import static pl.jojczykp.java8_katas.tools.MockingFilesTools.aFile;
 
@@ -25,6 +27,15 @@ public class Exercise4Test {
 		List<String> sorted = testee.sort(root);
 
 		assertThat(sorted, contains("subDir1", "subDir2", "file1.txt", "file2.txt"));
+	}
+
+	@Test
+	public void shouldReturnEmptyResult() {
+		File root = aDir("root");
+
+		List<String> subDirs = testee.sort(root);
+
+		assertThat(subDirs, is(empty()));
 	}
 
 }
