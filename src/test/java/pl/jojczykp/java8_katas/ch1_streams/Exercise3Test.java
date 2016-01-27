@@ -6,8 +6,8 @@ import java.io.File;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
-import static pl.jojczykp.java8_katas.ch1_streams.MockingFilesTools.aDir;
-import static pl.jojczykp.java8_katas.ch1_streams.MockingFilesTools.aFile;
+import static pl.jojczykp.java8_katas.tools.MockingFilesTools.aDir;
+import static pl.jojczykp.java8_katas.tools.MockingFilesTools.aFile;
 
 public class Exercise3Test {
 

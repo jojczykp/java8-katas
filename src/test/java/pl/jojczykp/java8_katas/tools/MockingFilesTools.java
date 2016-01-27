@@ -1,4 +1,4 @@
-package pl.jojczykp.java8_katas.ch1_streams;
+package pl.jojczykp.java8_katas.tools;
 
 import java.io.File;
 import java.io.FileFilter;
