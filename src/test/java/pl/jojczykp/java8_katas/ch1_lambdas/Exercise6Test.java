@@ -44,4 +44,5 @@ public class Exercise6Test {
 		constructor.setAccessible(true);
 		constructor.newInstance();
 	}
+
 }
