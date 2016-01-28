@@ -5,7 +5,8 @@ import static java.util.Arrays.stream;
 public class Exercise1 {
 
 	public int sumLengthsInParallel(String[] words) {
-		return stream(words).parallel()
+		return stream(words)
+				.parallel().unordered()
 				.mapToInt(String::length)
 				.sum();
 	}

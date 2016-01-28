@@ -8,16 +8,16 @@ import static org.hamcrest.Matchers.is;
 
 public class Exercise1Test {
 
-	private static final String[] WORDS = {"once", "upon", "a", "time"};
-	private static final int SUM_LENGTH = 13;
-
 	private Exercise1 testee = new Exercise1();
 
 	@Test
 	public void shouldSumLengths() {
-		int sum = testee.sumLengthsInParallel(WORDS);
+		final String[] words = {"once", "upon", "a", "time"};
+		final int sumLength = 13;
 
-		assertThat(sum, is(equalTo(SUM_LENGTH)));
+		int sum = testee.sumLengthsInParallel(words);
+
+		assertThat(sum, is(equalTo(sumLength)));
 	}
 
 }
