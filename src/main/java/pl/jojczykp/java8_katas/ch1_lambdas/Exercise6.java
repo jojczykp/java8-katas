@@ -1,4 +1,4 @@
-package pl.jojczykp.java8_katas.ch1_streams;
+package pl.jojczykp.java8_katas.ch1_lambdas;
 
 public final class Exercise6 {
 

@@ -1,4 +1,4 @@
-package pl.jojczykp.java8_katas.ch1_streams;
+package pl.jojczykp.java8_katas.ch1_lambdas;
 
 import org.junit.Test;
 
@@ -7,7 +7,7 @@ import java.lang.reflect.Constructor;
 import static java.lang.reflect.Modifier.isPrivate;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static pl.jojczykp.java8_katas.ch1_streams.Exercise6.uncheck;
+import static pl.jojczykp.java8_katas.ch1_lambdas.Exercise6.uncheck;
 
 public class Exercise6Test {
 
