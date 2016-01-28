@@ -8,7 +8,7 @@
 				http://pmd.sourceforge.net/ruleset_2_0_0.xsd"
 >
 	<description>This ruleset checks my code.</description>
-	<rule ref="rulesets/java/basic.xml/UnusedNullCheckInEquals">
+	<rule ref="rulesets/java/unnecessary.xml/UnusedNullCheckInEquals">
 		<priority>3</priority>
 	</rule>
 	<rule ref="rulesets/java/strings.xml/StringInstantiation">
@@ -80,13 +80,13 @@
 	<rule ref="rulesets/java/basic.xml/CollapsibleIfStatements">
 		<priority>4</priority>
 	</rule>
-	<rule ref="rulesets/java/basic.xml/UselessOperationOnImmutable">
+	<rule ref="rulesets/java/unnecessary.xml/UselessOperationOnImmutable">
 		<priority>2</priority>
 	</rule>
 	<rule ref="rulesets/java/clone.xml/CloneMethodMustImplementCloneable">
 		<priority>3</priority>
 	</rule>
-	<rule ref="rulesets/java/basic.xml/UselessOverridingMethod">
+	<rule ref="rulesets/java/unnecessary.xml/UselessOverridingMethod">
 		<priority>3</priority>
 	</rule>
 	<rule ref="rulesets/java/design.xml/PreserveStackTrace">
@@ -236,7 +236,7 @@
 	<rule ref="rulesets/java/imports.xml/DuplicateImports">
 		<priority>4</priority>
 	</rule>
-	<rule ref="rulesets/java/basic.xml/EmptyStatementNotInLoop">
+	<rule ref="rulesets/java/unnecessary.xml/EmptyStatementNotInLoop">
 		<priority>3</priority>
 	</rule>
 	<rule ref="rulesets/java/naming.xml/GenericsNaming">
