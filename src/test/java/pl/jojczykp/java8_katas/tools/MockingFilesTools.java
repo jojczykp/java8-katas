@@ -9,7 +9,9 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public abstract class MockingFilesTools {
+public final class MockingFilesTools {
+
+	private MockingFilesTools() {}
 
 	public static File aFile(String name) {
 		File file = mock(File.class);
