@@ -27,7 +27,7 @@ public class Exercise7Test {
 
 	@Test
 	public void shouldHavePrivateSoleConstructor() throws Exception {
-		Constructor<Exercise6> constructor = Exercise6.class.getDeclaredConstructor();
+		Constructor<Exercise7> constructor = Exercise7.class.getDeclaredConstructor();
 		assertThat(isPrivate(constructor.getModifiers()), is(true));
 		constructor.setAccessible(true);
 		constructor.newInstance();
