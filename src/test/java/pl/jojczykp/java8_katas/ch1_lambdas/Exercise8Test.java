@@ -11,7 +11,7 @@ import static org.hamcrest.Matchers.contains;
 public class Exercise8Test {
 
 	@Test
-	public void shouldRunBoth() {
+	public void shouldExecuteLambdaRunnablesInLoop() {
 		String[] names = { "Peter", "Paul", "Mary" };
 		List<Runnable> runners = new LinkedList<>();
 		List<String> messages = new LinkedList<>();
