@@ -3,10 +3,8 @@ package pl.jojczykp.java8_katas.ch1_lambdas;
 import org.junit.Test;
 import pl.jojczykp.java8_katas.ch1_lambdas.Exercise9.Collection2;
 
-import java.lang.reflect.Constructor;
 import java.util.Set;
 
-import static java.lang.reflect.Modifier.isPrivate;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
@@ -26,11 +24,4 @@ public class Exercise9Test {
 		assertThat(output, is(equalTo(newSet("aCar", "aHouse"))));
 	}
 
-	@Test
-	public void shouldHavePrivateSoleConstructor() throws Exception {
-		Constructor<Exercise9> constructor = Exercise9.class.getDeclaredConstructor();
-		assertThat(isPrivate(constructor.getModifiers()), is(true));
-		constructor.setAccessible(true);
-		constructor.newInstance();
-	}
 }
