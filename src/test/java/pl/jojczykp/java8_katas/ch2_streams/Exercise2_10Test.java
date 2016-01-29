@@ -13,9 +13,8 @@ public class Exercise2_10Test {
 
 	private Exercise2_10 testee = new Exercise2_10();
 
-	//CHECKSTYLE.OFF: MagicNumber
-
 	@Test
+	@SuppressWarnings("checkstyle:magicnumber")
 	public void shouldComputeAverage() {
 		Stream<Double> stream = Stream.of(2.8, 4.6, 6.4, 8.2);
 
@@ -24,8 +23,6 @@ public class Exercise2_10Test {
 		assertThat(optionalAverage.isPresent(), is(true));
 		assertThat(optionalAverage.get(), is(equalTo(5.5)));
 	}
-
-	//CHECKSTYLE.ON: MagicNumber
 
 	@Test
 	public void shouldReturnEmptyOptionalForEmptyStream() {

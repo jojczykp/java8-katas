@@ -22,11 +22,10 @@ public class Exercise2_10 {
 				Optional.empty();
 	}
 
+	@SuppressWarnings("checkstyle:visibilitymodifier")
 	private static class Summary {
-		//CHECKSTYLE.OFF: VisibilityModifier
 		int cnt;
 		double avg;
-		//CHECKSTYLE.ON: VisibilityModifier
 
 		Summary(int cnt, double avg) {
 			this.cnt = cnt;
