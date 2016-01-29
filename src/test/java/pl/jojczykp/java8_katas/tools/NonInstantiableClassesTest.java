@@ -5,6 +5,7 @@ import pl.jojczykp.java8_katas.ch1_lambdas.Exercise1_6;
 import pl.jojczykp.java8_katas.ch1_lambdas.Exercise1_7;
 import pl.jojczykp.java8_katas.ch1_lambdas.Exercise1_9;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise2_6;
+import pl.jojczykp.java8_katas.ch2_streams.Exercise2_8;
 
 import java.lang.reflect.Constructor;
 
@@ -20,6 +21,7 @@ public class NonInstantiableClassesTest {
 		shouldHavePrivateSoleConstructor(Exercise1_7.class);
 		shouldHavePrivateSoleConstructor(Exercise1_9.class);
 		shouldHavePrivateSoleConstructor(Exercise2_6.class);
+		shouldHavePrivateSoleConstructor(Exercise2_8.class);
 	}
 
 	private <T> void shouldHavePrivateSoleConstructor(Class<T> clazz) throws Exception {
