@@ -2,6 +2,7 @@ package pl.jojczykp.java8_katas.ch2_streams;
 
 import org.junit.Test;
 
+import java.util.Optional;
 import java.util.stream.Stream;
 
 import static org.hamcrest.Matchers.equalTo;
@@ -16,11 +17,21 @@ public class Exercise2_10Test {
 	public void shouldComputeAverage() {
 		Stream<Double> stream = Stream.of(2.8, 4.6, 6.4, 8.2);
 
-		double average = Exercise2_10.averageOf(stream);
+		Optional<Double> optionalAverage = Exercise2_10.averageUsingReduceOf(stream);
 
-		assertThat(average, is(equalTo(5.5)));
+		assertThat(optionalAverage.isPresent(), is(true));
+		assertThat(optionalAverage.get(), is(equalTo(5.5)));
 	}
 
 	//CHECKSTYLE.ON: MagicNumber
+
+	@Test
+	public void shouldReturnEmptyOptionalForEmptyStream() {
+		Stream<Double> stream = Stream.empty();
+
+		Optional<Double> optionalAverage = Exercise2_10.averageUsingReduceOf(stream);
+
+		assertThat(optionalAverage.isPresent(), is(false));
+	}
 
 }
