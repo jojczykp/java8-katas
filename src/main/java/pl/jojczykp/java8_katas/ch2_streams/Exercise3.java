@@ -38,4 +38,5 @@ public class Exercise3 {
 
 		return (end - beg);
 	}
+
 }
