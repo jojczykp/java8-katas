@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 
 public class Exercise2_11 {
 
-	public void shouldPopulateConcurrently(Stream<String> stream, String[] destination) {
+	public void populateConcurrently(Stream<String> stream, String[] destination) {
 		AtomicInteger idx = new AtomicInteger(0);
 
 		stream

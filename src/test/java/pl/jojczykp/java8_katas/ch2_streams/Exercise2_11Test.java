@@ -17,7 +17,7 @@ public class Exercise2_11Test {
 		String[] source = {"a", "b", "c", "d", "e"};
 		String[] destination = new String[source.length];
 
-		testee.shouldPopulateConcurrently(Stream.of(source), destination);
+		testee.populateConcurrently(Stream.of(source), destination);
 
 		assertThat(asList(destination), containsInAnyOrder(source));
 	}
