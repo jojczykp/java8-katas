@@ -14,6 +14,8 @@ import static org.junit.Assert.assertThat;
 
 public class Exercise2_9Test {
 
+	private Exercise2_9<String> testee = new Exercise2_9<>();
+
 	private static final List<String> LIST_1 = asList("a", "b", "c");
 	private static final List<String> LIST_2 = asList("d", "e", "f");
 	private static final String[] EXPECTED_RESULT = {"a", "b", "c", "d", "e", "f"};
@@ -22,7 +24,7 @@ public class Exercise2_9Test {
 	public void shouldSeriallyJoinListsToNewInstance() {
 		Stream<List<String>> listStream = Stream.of(LIST_1, LIST_2);
 
-		List<String> joined = Exercise2_9.joinSeriallyListsToNewInstance(listStream);
+		List<String> joined = testee.joinSeriallyListsToNewInstance(listStream);
 
 		assertThat(joined, contains(EXPECTED_RESULT));
 	}
@@ -31,7 +33,7 @@ public class Exercise2_9Test {
 	public void shouldJoinListsToNewInstanceWithCombining() {
 		Stream<List<String>> listStream = Stream.of(LIST_1, LIST_2).parallel();
 
-		List<String> joined = Exercise2_9.joinInParallelListsToNewInstanceWithCombining(listStream);
+		List<String> joined = testee.joinInParallelListsToNewInstanceWithCombining(listStream);
 
 		assertThat(joined, contains(EXPECTED_RESULT));
 	}
@@ -40,7 +42,7 @@ public class Exercise2_9Test {
 	public void shouldJoinListsMutatingFirstOptionally() {
 		Stream<List<String>> listStream = Stream.of(cloneList(LIST_1), LIST_2);
 
-		Optional<List<String>> joined = Exercise2_9.joinSeriallyListsMutatingFirstOptionally(listStream);
+		Optional<List<String>> joined = testee.joinSeriallyListsMutatingFirstOptionally(listStream);
 
 		assertThat(joined.isPresent(), is(true));
 		assertThat(joined.get(), contains(EXPECTED_RESULT));
@@ -50,7 +52,7 @@ public class Exercise2_9Test {
 	public void shouldBeNotPresent() {
 		Stream<List<String>> listStream = Stream.empty();
 
-		Optional<List<String>> joined = Exercise2_9.joinSeriallyListsMutatingFirstOptionally(listStream);
+		Optional<List<String>> joined = testee.joinSeriallyListsMutatingFirstOptionally(listStream);
 
 		assertThat(joined.isPresent(), is(false));
 	}

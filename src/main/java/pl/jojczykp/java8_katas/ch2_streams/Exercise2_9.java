@@ -5,12 +5,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public final class Exercise2_9 {
+public class Exercise2_9<T> {
 
-	private Exercise2_9() {
-	}
-
-	public static <T> List<T> joinSeriallyListsToNewInstance(Stream<List<T>> listStream) {
+	public List<T> joinSeriallyListsToNewInstance(Stream<List<T>> listStream) {
 		return listStream.reduce(
 				new ArrayList<>(),
 				(current, item) -> {
@@ -20,7 +17,7 @@ public final class Exercise2_9 {
 		);
 	}
 
-	public static <T> List<T> joinInParallelListsToNewInstanceWithCombining(Stream<List<T>> listStream) {
+	public List<T> joinInParallelListsToNewInstanceWithCombining(Stream<List<T>> listStream) {
 		return listStream.reduce(
 				new ArrayList<>(),
 				(current, item) -> {
@@ -38,7 +35,7 @@ public final class Exercise2_9 {
 		);
 	}
 
-	public static <T> Optional<List<T>> joinSeriallyListsMutatingFirstOptionally(Stream<List<T>> listStream) {
+	public Optional<List<T>> joinSeriallyListsMutatingFirstOptionally(Stream<List<T>> listStream) {
 		return listStream.reduce(
 				(current, item) -> {
 					current.addAll(item);
