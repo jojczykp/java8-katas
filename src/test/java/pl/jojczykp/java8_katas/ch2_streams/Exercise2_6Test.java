@@ -10,13 +10,11 @@ import static org.junit.Assert.assertThat;
 
 public class Exercise2_6Test {
 
-	private Exercise2_6 testee = new Exercise2_6();
-
 	@Test
 	public void shouldGenerateStreamOfCharsFromString() {
 		final String string = "test";
 
-		Stream<Character> stream = testee.characterStream(string);
+		Stream<Character> stream = Exercise2_6.characterStream(string);
 
 		assertThat(stream.collect(toList()), contains('t', 'e', 's', 't'));
 	}

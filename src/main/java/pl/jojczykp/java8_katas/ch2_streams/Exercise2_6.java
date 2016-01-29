@@ -3,9 +3,12 @@ package pl.jojczykp.java8_katas.ch2_streams;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class Exercise2_6 {
+public final class Exercise2_6 {
 
-	public Stream<Character> characterStream(String s) {
+	private Exercise2_6() {
+	}
+
+	public static Stream<Character> characterStream(String s) {
 		return IntStream.range(0, s.length()).mapToObj(s::charAt);
 	}
 
