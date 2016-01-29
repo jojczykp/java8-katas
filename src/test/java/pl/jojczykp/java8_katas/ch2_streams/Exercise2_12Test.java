@@ -13,10 +13,10 @@ public class Exercise2_12Test {
 	private Exercise2_12 testee = new Exercise2_12();
 
 	@Test
-	public void shouldCountShortWords() {
+	public void shouldCountShortWordsUsingArray() {
 		String[] source = {"abc", "b", "ac", "asd_fgh_jkl", "xyz", "", "q", "", "stu", "qwerty"};
 
-		List<Integer> shortWordsCounters = testee.countShortWords(Stream.of(source), 3);
+		List<Integer> shortWordsCounters = testee.countShortWordsUsingArray(Stream.of(source), 3);
 
 		assertThat(shortWordsCounters, contains(2, 2, 1, 3));
 	}

@@ -9,7 +9,7 @@ import static java.util.stream.Stream.generate;
 
 public class Exercise2_12 {
 
-	public List<Integer> countShortWords(Stream<String> words, int maxLength) {
+	public List<Integer> countShortWordsUsingArray(Stream<String> words, int maxLength) {
 		AtomicInteger[] shortWords = generate(() -> new AtomicInteger(0))
 				.limit(maxLength + 1).toArray(AtomicInteger[]::new);
 
