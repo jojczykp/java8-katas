@@ -3,12 +3,9 @@ package pl.jojczykp.java8_katas.ch2_streams;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public final class Exercise2_10 {
+public class Exercise2_10 {
 
-	private Exercise2_10() {
-	}
-
-	public static Optional<Double> averageUsingReduceOf(Stream<Double> stream) {
+	public Optional<Double> averageUsingReduceOf(Stream<Double> stream) {
 		Summary summary = stream
 				.parallel().unordered()
 				.reduce(
