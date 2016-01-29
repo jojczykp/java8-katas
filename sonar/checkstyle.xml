@@ -147,6 +147,7 @@
 			<property name="severity" value="info"/>
 			<property name="ignoreHashCodeMethod" value="false"/>
 			<property name="ignoreAnnotation" value="false"/>
+			<property name="ignoreNumbers" value="-1, 0, 1, 2, 3"/>
 		</module>
 	</module>
 </module>
