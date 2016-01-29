@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Exercise4 {
+public class Exercise1_4 {
 
 	public List<String> sort(File dir) {
 		return Stream.of(dir.listFiles())

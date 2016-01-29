@@ -1,8 +1,8 @@
 package pl.jojczykp.java8_katas.ch1_lambdas;
 
-public final class Exercise6 {
+public final class Exercise1_6 {
 
-	private Exercise6() {}
+	private Exercise1_6() {}
 
 	public static Runnable uncheck(RunnableEx runner) {
 		return () -> {

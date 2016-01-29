@@ -1,7 +1,7 @@
 package pl.jojczykp.java8_katas.ch1_lambdas;
 
 import org.junit.Test;
-import pl.jojczykp.java8_katas.ch1_lambdas.Exercise9.Collection2;
+import pl.jojczykp.java8_katas.ch1_lambdas.Exercise1_9.Collection2;
 
 import java.util.Set;
 
@@ -10,9 +10,9 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.internal.util.collections.Sets.newSet;
 
-public class Exercise9Test {
+public class Exercise1_9Test {
 
-	private Collection2<String> testee = new Exercise9.Collection2<>();
+	private Collection2<String> testee = new Exercise1_9.Collection2<>();
 
 	@Test
 	public void shouldApplyActionForFilteredElementsOnly() {

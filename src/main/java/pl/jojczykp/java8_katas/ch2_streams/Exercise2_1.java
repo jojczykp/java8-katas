@@ -2,7 +2,7 @@ package pl.jojczykp.java8_katas.ch2_streams;
 
 import static java.util.Arrays.stream;
 
-public class Exercise1 {
+public class Exercise2_1 {
 
 	public int sumLengthsInParallel(String[] words) {
 		return stream(words)

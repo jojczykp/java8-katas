@@ -10,9 +10,9 @@ import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
-public class Exercise2Test {
+public class Exercise2_2Test {
 
-	private Exercise2 testee = new Exercise2();
+	private Exercise2_2 testee = new Exercise2_2();
 
 	@Test
 	public void shouldSumLengths() {

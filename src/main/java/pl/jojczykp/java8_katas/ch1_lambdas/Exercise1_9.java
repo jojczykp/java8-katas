@@ -5,9 +5,9 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 @SuppressWarnings("PMD.MissingStaticMethodInNonInstantiatableClass")
-public final class Exercise9 {
+public final class Exercise1_9 {
 
-	private Exercise9() {
+	private Exercise1_9() {
 	}
 
 	public static class Collection2<T> extends HashSet<T> {

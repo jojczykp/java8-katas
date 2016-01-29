@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 
-public class Exercise5 {
+public class Exercise2_5 {
 
 	private static final long A = 25214903917L;
 	private static final long C = 11L;

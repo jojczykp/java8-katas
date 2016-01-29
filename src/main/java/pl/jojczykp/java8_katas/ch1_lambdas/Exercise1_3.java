@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Exercise3 {
+public class Exercise1_3 {
 
 	public Set<String> getFilesByExtensionIn(File dir, String ext) {
 		return Stream.of(dir.list())

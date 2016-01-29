@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 import static java.util.Arrays.stream;
 
-public class Exercise2 {
+public class Exercise2_2 {
 
 	public Set<String> takeFirstLongWords(String[] words, int minLength, int limit, AtomicInteger filterCounter) {
 		return stream(words)

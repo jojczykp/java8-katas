@@ -12,9 +12,9 @@ import static org.hamcrest.Matchers.is;
 import static pl.jojczykp.java8_katas.tools.MockingFilesTools.aDir;
 import static pl.jojczykp.java8_katas.tools.MockingFilesTools.aFile;
 
-public class Exercise4Test {
+public class Exercise1_4Test {
 
-	private Exercise4 testee = new Exercise4();
+	private Exercise1_4 testee = new Exercise1_4();
 
 	@Test
 	public void shouldGetFilesByExtension() {

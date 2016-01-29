@@ -8,9 +8,9 @@ import static java.util.stream.Collectors.toList;
 import static org.hamcrest.Matchers.contains;
 import static org.junit.Assert.assertThat;
 
-public class Exercise6Test {
+public class Exercise2_6Test {
 
-	private Exercise6 testee = new Exercise6();
+	private Exercise2_6 testee = new Exercise2_6();
 
 	@Test
 	public void shouldGenerateStreamOfCharsFromString() {
