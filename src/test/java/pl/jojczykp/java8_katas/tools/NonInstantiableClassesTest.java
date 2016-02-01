@@ -1,9 +1,9 @@
 package pl.jojczykp.java8_katas.tools;
 
 import org.junit.Test;
-import pl.jojczykp.java8_katas.ch1_lambdas.Exercise1_6;
-import pl.jojczykp.java8_katas.ch1_lambdas.Exercise1_7;
-import pl.jojczykp.java8_katas.ch1_lambdas.Exercise1_9;
+import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise1_6;
+import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise1_7;
+import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise1_9;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise2_6;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise2_7;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise2_8;

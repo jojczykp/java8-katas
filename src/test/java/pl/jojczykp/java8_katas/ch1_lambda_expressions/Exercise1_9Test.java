@@ -1,7 +1,7 @@
-package pl.jojczykp.java8_katas.ch1_lambdas;
+package pl.jojczykp.java8_katas.ch1_lambda_expressions;
 
 import org.junit.Test;
-import pl.jojczykp.java8_katas.ch1_lambdas.Exercise1_9.Collection2;
+import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise1_9.Collection2;
 
 import java.util.Set;
 

@@ -1,8 +1,8 @@
-package pl.jojczykp.java8_katas.ch1_lambdas;
+package pl.jojczykp.java8_katas.ch1_lambda_expressions;
 
 import org.junit.Test;
 
-import static pl.jojczykp.java8_katas.ch1_lambdas.Exercise1_6.uncheck;
+import static pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise1_6.uncheck;
 
 public class Exercise1_6Test {
 
