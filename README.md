@@ -6,6 +6,7 @@ java8-katas
         http://horstmann.com/java8/
 
  * Stream API
+ * Lambdas
  
 Technologies
 ------------
