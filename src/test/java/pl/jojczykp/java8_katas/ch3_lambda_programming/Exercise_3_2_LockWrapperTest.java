@@ -17,10 +17,10 @@ import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 @RunWith(MockitoJUnitRunner.class)
-public class Exercise_3_2_LockTest {
+public class Exercise_3_2_LockWrapperTest {
 
 	private static final RuntimeException MY_RUNTIME_EXCEPTION = new RuntimeException();
-	private Exercise_3_2_Lock testee = new Exercise_3_2_Lock();
+	private Exercise_3_2_LockWrapper testee = new Exercise_3_2_LockWrapper();
 
 	@Mock private Lock myLock;
 	@Mock private Runnable myAction;

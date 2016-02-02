@@ -6,9 +6,9 @@ import javafx.scene.paint.Color;
 
 import java.util.function.BiFunction;
 
-public final class Exercise_3_6_ReturningFunctions {
+public final class Exercise_3_6_PassingParametrizedFunction {
 
-	private Exercise_3_6_ReturningFunctions() {
+	private Exercise_3_6_PassingParametrizedFunction() {
 	}
 
 	public static <T> Image transform(Image in, BiFunction<Color, T, Color> f, T arg) {

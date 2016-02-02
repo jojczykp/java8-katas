@@ -6,9 +6,9 @@ import javafx.scene.paint.Color;
 
 import java.util.function.BiPredicate;
 
-public final class Exercise_3_5_ImageFrame {
+public final class Exercise_3_5_PassingFunctions {
 
-	private Exercise_3_5_ImageFrame() {
+	private Exercise_3_5_PassingFunctions() {
 	}
 
 	public static Image transform(Image in, ColorTransformer f,

@@ -10,9 +10,9 @@ import static java.util.logging.Level.OFF;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class Exercise_3_1_LoggingTest {
+public class Exercise_3_1_LoggingWrapperTest {
 
-	private Exercise_3_1_Logging testee = new Exercise_3_1_Logging();
+	private Exercise_3_1_LoggingWrapper testee = new Exercise_3_1_LoggingWrapper();
 
 	@Test
 	public void shouldLogWithGivenLevelIfConditionIsTrue() {

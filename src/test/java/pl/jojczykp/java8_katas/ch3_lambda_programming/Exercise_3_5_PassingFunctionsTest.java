@@ -7,10 +7,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_5_ImageFrame.transform;
+import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_5_PassingFunctions.transform;
 import static pl.jojczykp.java8_katas.tools.IsEqualPixelByPixelTo.isEqualPixelByPixelTo;
 
-public class Exercise_3_5_ImageFrameTest {
+public class Exercise_3_5_PassingFunctionsTest {
 
 	private static final Color FRAME_COLOR = Color.BLACK;
 	private static final int FRAME_THICKNESS = 3;

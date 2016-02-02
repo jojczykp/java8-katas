@@ -7,10 +7,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_6_ReturningFunctions.transform;
+import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_6_PassingParametrizedFunction.transform;
 import static pl.jojczykp.java8_katas.tools.IsEqualPixelByPixelTo.isEqualPixelByPixelTo;
 
-public class Exercise_3_6_ReturningFunctionsTest {
+public class Exercise_3_6_PassingParametrizedFunctionTest {
 
 	private static final double NEW_OPACITY = 0.5;
 

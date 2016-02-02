@@ -7,8 +7,8 @@ import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise1_9;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise2_6;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise2_7;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise2_8;
-import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_5_ImageFrame;
-import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_6_ReturningFunctions;
+import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_5_PassingFunctions;
+import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_6_PassingParametrizedFunction;
 
 import java.lang.reflect.Constructor;
 
@@ -26,8 +26,8 @@ public class NonInstantiableClassesTest {
 		shouldHavePrivateSoleConstructor(Exercise2_6.class);
 		shouldHavePrivateSoleConstructor(Exercise2_7.class);
 		shouldHavePrivateSoleConstructor(Exercise2_8.class);
-		shouldHavePrivateSoleConstructor(Exercise_3_5_ImageFrame.class);
-		shouldHavePrivateSoleConstructor(Exercise_3_6_ReturningFunctions.class);
+		shouldHavePrivateSoleConstructor(Exercise_3_5_PassingFunctions.class);
+		shouldHavePrivateSoleConstructor(Exercise_3_6_PassingParametrizedFunction.class);
 	}
 
 	private <T> void shouldHavePrivateSoleConstructor(Class<T> clazz) throws Exception {
