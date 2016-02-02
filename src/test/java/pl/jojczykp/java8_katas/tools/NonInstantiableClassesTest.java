@@ -9,6 +9,7 @@ import pl.jojczykp.java8_katas.ch2_streams.Exercise2_7;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise2_8;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_5_PassingFunctions;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_6_PassingParametrizedFunction;
+import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_8_PassingGeneralizingFunctions;
 
 import java.lang.reflect.Constructor;
 
@@ -28,6 +29,7 @@ public class NonInstantiableClassesTest {
 		shouldHavePrivateSoleConstructor(Exercise2_8.class);
 		shouldHavePrivateSoleConstructor(Exercise_3_5_PassingFunctions.class);
 		shouldHavePrivateSoleConstructor(Exercise_3_6_PassingParametrizedFunction.class);
+		shouldHavePrivateSoleConstructor(Exercise_3_8_PassingGeneralizingFunctions.class);
 	}
 
 	private <T> void shouldHavePrivateSoleConstructor(Class<T> clazz) throws Exception {
