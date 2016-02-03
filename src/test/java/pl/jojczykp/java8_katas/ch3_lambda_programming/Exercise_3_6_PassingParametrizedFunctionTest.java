@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_6_PassingParametrizedFunction.transform;
+import static pl.jojczykp.java8_katas.tools.ImageTools.anImageFromResource;
 import static pl.jojczykp.java8_katas.tools.IsEqualPixelByPixelTo.isEqualPixelByPixelTo;
 
 public class Exercise_3_6_PassingParametrizedFunctionTest {
@@ -33,10 +34,6 @@ public class Exercise_3_6_PassingParametrizedFunctionTest {
 				NEW_OPACITY);
 
 		assertThat(transformed, isEqualPixelByPixelTo(withOpacityChanged));
-	}
-
-	private Image anImageFromResource(String resourceName) {
-		return new Image(getClass().getClassLoader().getResourceAsStream(resourceName));
 	}
 
 }

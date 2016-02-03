@@ -9,6 +9,7 @@ import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_8_PassingGeneralizingFunctions.addingFrame;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_8_PassingGeneralizingFunctions.transform;
+import static pl.jojczykp.java8_katas.tools.ImageTools.anImageFromResource;
 import static pl.jojczykp.java8_katas.tools.IsEqualPixelByPixelTo.isEqualPixelByPixelTo;
 
 public class Exercise_3_8_PassingGeneralizingFunctionsTest {
@@ -33,10 +34,6 @@ public class Exercise_3_8_PassingGeneralizingFunctionsTest {
 				addingFrame(imgWidth, imgHeight, FRAME_COLOR, FRAME_THICKNESS));
 
 		assertThat(transformed, isEqualPixelByPixelTo(framed));
-	}
-
-	private Image anImageFromResource(String resourceName) {
-		return new Image(getClass().getClassLoader().getResourceAsStream(resourceName));
 	}
 
 }

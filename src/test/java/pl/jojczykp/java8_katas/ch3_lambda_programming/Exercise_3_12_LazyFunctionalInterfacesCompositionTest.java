@@ -11,6 +11,7 @@ import pl.jojczykp.java8_katas.ch3_lambda_programming.
 import java.io.IOException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static pl.jojczykp.java8_katas.tools.ImageTools.anImageFromResource;
 import static pl.jojczykp.java8_katas.tools.IsEqualPixelByPixelTo.isEqualPixelByPixelTo;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.
 		Exercise_3_12_LazyFunctionalInterfacesComposition.adapting;
@@ -40,10 +41,6 @@ public class Exercise_3_12_LazyFunctionalInterfacesCompositionTest {
 				.toImage();
 
 		assertThat(transformed, isEqualPixelByPixelTo(darkWithFrame));
-	}
-
-	private Image anImageFromResource(String resourceName) {
-		return new Image(getClass().getClassLoader().getResourceAsStream(resourceName));
 	}
 
 }
