@@ -12,9 +12,9 @@ import static org.hamcrest.Matchers.is;
 import static pl.jojczykp.java8_katas.tools.MockingFilesTools.aDir;
 import static pl.jojczykp.java8_katas.tools.MockingFilesTools.aFile;
 
-public class Exercise1_2Test {
+public class Exercise_1_2_MapReduceTest {
 
-	private Exercise1_2 testee = new Exercise1_2();
+	private Exercise_1_2_MapReduce testee = new Exercise_1_2_MapReduce();
 
 	@Test
 	public void shouldGetAllSubDirsOnly() {

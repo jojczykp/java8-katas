@@ -1,8 +1,8 @@
 package pl.jojczykp.java8_katas.ch1_lambda_expressions;
 
-public final class Exercise1_6 {
+public final class Exercise_1_6_UncheckExceptionWrapper {
 
-	private Exercise1_6() {}
+	private Exercise_1_6_UncheckExceptionWrapper() {}
 
 	public static Runnable uncheck(RunnableEx runner) {
 		return () -> {

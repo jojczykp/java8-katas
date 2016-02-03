@@ -8,7 +8,7 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
 
-public class Exercise1_8Test {
+public class Exercise_1_8_RunnablesInLoopTest {
 
 	@Test
 	public void shouldExecuteLambdaRunnablesInLoop() {

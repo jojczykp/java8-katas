@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Exercise1_4 {
+public class Exercise_1_4_FilterMapCollect {
 
 	public List<String> sort(File dir) {
 		return Stream.of(dir.listFiles())

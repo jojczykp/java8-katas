@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Exercise1_2 {
+public class Exercise_1_2_MapReduce {
 
 	public Set<String> getAllSubDirsOnlyIn(File dir) {
 		return Stream.of(dir.listFiles(File::isDirectory))

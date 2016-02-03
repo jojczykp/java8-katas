@@ -1,9 +1,9 @@
 package pl.jojczykp.java8_katas.tools;
 
 import org.junit.Test;
-import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise1_6;
-import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise1_7;
-import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise1_9;
+import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise_1_6_UncheckExceptionWrapper;
+import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise_1_7_CombineTwoLambdas;
+import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise_1_9_ForEachIf;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise_2_6_UseRangeToAccessArray;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise_2_7_CountClosesStream;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise_2_8_Zip;
@@ -21,9 +21,9 @@ public class NonInstantiableClassesTest {
 
 	@Test
 	public void shouldHavePrivateSoleConstructor() throws Exception {
-		shouldHavePrivateSoleConstructor(Exercise1_6.class);
-		shouldHavePrivateSoleConstructor(Exercise1_7.class);
-		shouldHavePrivateSoleConstructor(Exercise1_9.class);
+		shouldHavePrivateSoleConstructor(Exercise_1_6_UncheckExceptionWrapper.class);
+		shouldHavePrivateSoleConstructor(Exercise_1_7_CombineTwoLambdas.class);
+		shouldHavePrivateSoleConstructor(Exercise_1_9_ForEachIf.class);
 		shouldHavePrivateSoleConstructor(Exercise_2_6_UseRangeToAccessArray.class);
 		shouldHavePrivateSoleConstructor(Exercise_2_7_CountClosesStream.class);
 		shouldHavePrivateSoleConstructor(Exercise_2_8_Zip.class);
