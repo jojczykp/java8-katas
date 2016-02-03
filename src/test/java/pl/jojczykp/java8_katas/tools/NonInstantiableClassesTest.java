@@ -38,4 +38,5 @@ public class NonInstantiableClassesTest {
 		constructor.setAccessible(true);
 		constructor.newInstance();
 	}
+
 }
