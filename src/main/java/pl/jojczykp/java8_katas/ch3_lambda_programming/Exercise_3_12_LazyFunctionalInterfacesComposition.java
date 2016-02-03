@@ -67,5 +67,4 @@ public final class Exercise_3_12_LazyFunctionalInterfacesComposition {
 		return (x, y, color) -> op.apply(color);
 	}
 
-
 }
