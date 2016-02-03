@@ -9,9 +9,9 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-public class Exercise2_10Test {
+public class Exercise_2_10_CustomStatisticsImplementationTest {
 
-	private Exercise2_10 testee = new Exercise2_10();
+	private Exercise_2_10_CustomStatisticsImplementation testee = new Exercise_2_10_CustomStatisticsImplementation();
 
 	@Test
 	@SuppressWarnings("checkstyle:magicnumber")

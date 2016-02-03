@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-public class Exercise2_7Test {
+public class Exercise_2_7_CountClosesStreamTest {
 
 	// No test for infinite stream
 
@@ -15,7 +15,7 @@ public class Exercise2_7Test {
 	public void shouldRecognizeFiniteStream() {
 		final Stream<String> stream = Stream.of("a", "b");
 
-		boolean isFinite = Exercise2_7.isFinite(stream);
+		boolean isFinite = Exercise_2_7_CountClosesStream.isFinite(stream);
 
 		assertThat(isFinite, is(true));
 	}

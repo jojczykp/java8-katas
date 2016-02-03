@@ -6,9 +6,10 @@ import java.util.stream.Collectors;
 
 import static java.util.Arrays.stream;
 
-public class Exercise2_2 {
+public class Exercise_2_2_IgnoreFilteredOutItems {
 
-	public Set<String> takeFirstLongWords(String[] words, int minLength, int limit, AtomicInteger filterCounter) {
+	public Set<String> takeFirstLongWords(
+			String[] words, int minLength, int limit, AtomicInteger filterCounter) {
 		return stream(words)
 				.filter(s -> {
 					filterCounter.incrementAndGet();

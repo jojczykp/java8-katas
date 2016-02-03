@@ -9,9 +9,9 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-public class Exercise2_5Test {
+public class Exercise_2_5_CreateAndReadUnlimitedStreamTest {
 
-	private Exercise2_5 testee = new Exercise2_5();
+	private Exercise_2_5_CreateAndReadUnlimitedStream testee = new Exercise_2_5_CreateAndReadUnlimitedStream();
 
 	@Test
 	public void shouldGetPseudoRandomNumbers() {

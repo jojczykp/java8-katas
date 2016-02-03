@@ -8,13 +8,13 @@ import static java.util.stream.Collectors.toList;
 import static org.hamcrest.Matchers.contains;
 import static org.junit.Assert.assertThat;
 
-public class Exercise2_6Test {
+public class Exercise_2_6_UseRangeToAccessArrayTest {
 
 	@Test
 	public void shouldGenerateStreamOfCharsFromString() {
 		final String string = "test";
 
-		Stream<Character> stream = Exercise2_6.characterStream(string);
+		Stream<Character> stream = Exercise_2_6_UseRangeToAccessArray.characterStream(string);
 
 		assertThat(stream.collect(toList()), contains('t', 'e', 's', 't'));
 	}

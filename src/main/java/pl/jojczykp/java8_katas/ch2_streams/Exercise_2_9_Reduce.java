@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public class Exercise2_9<T> {
+public class Exercise_2_9_Reduce<T> {
 
 	public List<T> joinSeriallyListsToNewInstance(Stream<List<T>> listStream) {
 		return listStream.reduce(

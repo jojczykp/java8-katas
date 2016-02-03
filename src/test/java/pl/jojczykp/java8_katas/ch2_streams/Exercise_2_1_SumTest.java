@@ -6,9 +6,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
-public class Exercise2_1Test {
+public class Exercise_2_1_SumTest {
 
-	private Exercise2_1 testee = new Exercise2_1();
+	private Exercise_2_1_Sum testee = new Exercise_2_1_Sum();
 
 	@Test
 	public void shouldSumLengths() {

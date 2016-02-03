@@ -3,7 +3,7 @@ package pl.jojczykp.java8_katas.ch2_streams;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public class Exercise2_10 {
+public class Exercise_2_10_CustomStatisticsImplementation {
 
 	public Optional<Double> averageUsingReduceOf(Stream<Double> stream) {
 		Summary summary = stream

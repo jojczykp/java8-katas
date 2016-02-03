@@ -8,9 +8,9 @@ import java.util.stream.Stream;
 import static org.hamcrest.Matchers.contains;
 import static org.junit.Assert.assertThat;
 
-public class Exercise2_12Test {
+public class Exercise_2_12_WordCounterTest {
 
-	private Exercise2_12 testee = new Exercise2_12();
+	private Exercise_2_12_WordCounterWithArray testee = new Exercise_2_12_WordCounterWithArray();
 
 	@Test
 	public void shouldCountShortWordsUsingArray() {

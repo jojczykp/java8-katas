@@ -12,9 +12,9 @@ import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-public class Exercise2_9Test {
+public class Exercise_2_9_ReduceTest {
 
-	private Exercise2_9<String> testee = new Exercise2_9<>();
+	private Exercise_2_9_Reduce<String> testee = new Exercise_2_9_Reduce<>();
 
 	private static final List<String> LIST_1 = asList("a", "b", "c");
 	private static final List<String> LIST_2 = asList("d", "e", "f");

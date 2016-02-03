@@ -8,11 +8,11 @@ import static java.util.stream.Collectors.toList;
 import static java.util.stream.IntStream.rangeClosed;
 import static org.junit.Assert.assertTrue;
 
-public class Exercise2_3Test {
+public class Exercise_2_3_ParallelAndSequentialTimesTest {
 
 	private static final String LONG_WORD = "LongWordLongWordLongWordLongWordLongWordLongWordLongWord";
 
-	private Exercise2_3 testee = new Exercise2_3();
+	private Exercise_2_3_ParallelAndSequentialTimes testee = new Exercise_2_3_ParallelAndSequentialTimes();
 
 	@Test
 	public void shouldSimpleOperationInParallelBeSlowerThanSequential() {

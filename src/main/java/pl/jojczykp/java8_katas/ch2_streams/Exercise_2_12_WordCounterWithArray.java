@@ -7,10 +7,10 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Stream.generate;
 
-public class Exercise2_12 {
+public class Exercise_2_12_WordCounterWithArray {
 
 	public List<Integer> countShortWordsUsingArray(Stream<String> words, int maxLength) {
-		AtomicInteger[] shortWords = generate(() -> new AtomicInteger(0))
+		AtomicInteger[] shortWords = generate(AtomicInteger::new)
 				.limit(maxLength + 1).toArray(AtomicInteger[]::new);
 
 		words.parallel()

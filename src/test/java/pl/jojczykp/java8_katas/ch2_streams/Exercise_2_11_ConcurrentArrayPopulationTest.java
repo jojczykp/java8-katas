@@ -8,9 +8,9 @@ import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.Assert.assertThat;
 
-public class Exercise2_11Test {
+public class Exercise_2_11_ConcurrentArrayPopulationTest {
 
-	private Exercise2_11 testee = new Exercise2_11();
+	private Exercise_2_11_ConcurrentArrayPopulation testee = new Exercise_2_11_ConcurrentArrayPopulation();
 
 	@Test
 	public void shouldPopulateSingleArrayListConcurrently() {

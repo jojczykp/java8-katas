@@ -10,9 +10,9 @@ import static java.util.Spliterator.ORDERED;
 import static java.util.Spliterators.spliteratorUnknownSize;
 import static java.util.stream.Collectors.toList;
 
-public final class Exercise2_8 {
+public final class Exercise_2_8_Zip {
 
-	private Exercise2_8() {
+	private Exercise_2_8_Zip() {
 	}
 
 	@SafeVarargs

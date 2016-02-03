@@ -3,7 +3,7 @@ package pl.jojczykp.java8_katas.ch2_streams;
 import java.util.Collection;
 import java.util.function.Supplier;
 
-public class Exercise2_3 {
+public class Exercise_2_3_ParallelAndSequentialTimes {
 
 	public long timeOfCountingWordsSequential(Collection<String> collection) {
 		return durationOf(() -> collection
