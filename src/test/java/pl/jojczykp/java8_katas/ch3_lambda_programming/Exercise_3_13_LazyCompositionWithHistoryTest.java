@@ -7,8 +7,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_13_LazyCompositionWithHistory.ComposedImageTransformer;
 
-import java.io.IOException;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_13_LazyCompositionWithHistory.adapting;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_13_LazyCompositionWithHistory.addingFrame;
@@ -27,7 +25,7 @@ public class Exercise_3_13_LazyCompositionWithHistoryTest {
 	}
 
 	@Test
-	public void shouldPaintDarkWithFrame() throws IOException {
+	public void shouldPaintDarkWithFrame() {
 		Image unframed = anImageFromResource("ch3_lambda_programming/imageUnframed.png");
 		Image blurred = anImageFromResource("ch3_lambda_programming/imageDarkFramedBlurred.png");
 
