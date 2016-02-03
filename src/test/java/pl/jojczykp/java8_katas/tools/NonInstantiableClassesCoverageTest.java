@@ -10,6 +10,7 @@ import pl.jojczykp.java8_katas.ch2_streams.Exercise_2_8_Zip;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_12_LazyFunctionalInterfacesComposition;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_13_LazyCompositionWithHistory;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyCompositionWithHistoryInt;
+import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_15_LazyParallel;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_5_PassingFunctions;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_6_PassingParametrizedFunction;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_8_PassingGeneralizingFunctions;
@@ -36,6 +37,7 @@ public class NonInstantiableClassesCoverageTest {
 		shouldHavePrivateSoleConstructor(Exercise_3_12_LazyFunctionalInterfacesComposition.class);
 		shouldHavePrivateSoleConstructor(Exercise_3_13_LazyCompositionWithHistory.class);
 		shouldHavePrivateSoleConstructor(Exercise_3_14_LazyCompositionWithHistoryInt.class);
+		shouldHavePrivateSoleConstructor(Exercise_3_15_LazyParallel.class);
 	}
 
 	private <T> void shouldHavePrivateSoleConstructor(Class<T> clazz) throws Exception {

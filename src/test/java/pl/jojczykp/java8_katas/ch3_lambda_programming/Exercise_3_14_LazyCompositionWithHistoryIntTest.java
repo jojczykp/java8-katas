@@ -27,7 +27,7 @@ public class Exercise_3_14_LazyCompositionWithHistoryIntTest {
 	}
 
 	@Test
-	public void shouldPaintDarkWithFrame() {
+	public void shouldPaintDarkWithFrameBlurrAndMirroring() {
 		Image normal = anImageFromResource("ch3_lambda_programming/image.png");
 		Image expected = anImageFromResource("ch3_lambda_programming/imageDarkFramedBlurredMirrored.png");
 
