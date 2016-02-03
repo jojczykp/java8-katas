@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.lessThan;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_9_YieldingComparator.Person;
 
-public class Exercise_3_8_YieldingComparatorTest {
+public class Exercise_3_9_YieldingComparatorTest {
 
 	private static final Matcher<Integer> FIRST_LOWER = lessThan(0);
 	private static final Matcher<Integer> EQUAL = equalTo(0);
