@@ -20,7 +20,7 @@ import static java.lang.reflect.Modifier.isPrivate;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class NonInstantiableClassesTest {
+public class NonInstantiableClassesCoverageTest {
 
 	@Test
 	public void shouldHavePrivateSoleConstructor() throws Exception {

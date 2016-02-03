@@ -122,7 +122,7 @@ public final class Exercise_3_14_LazyCompositionWithHistoryInt {
 		}
 	}
 
-	private static class PixelReaderCache implements PixelReader {
+	static class PixelReaderCache implements PixelReader {
 		private PixelReader reader;
 		private Color[][] cache;
 
@@ -142,30 +142,30 @@ public final class Exercise_3_14_LazyCompositionWithHistoryInt {
 
 		@Override
 		public PixelFormat getPixelFormat() {
-			throw new RuntimeException("getPixelFormat not implemented");
+			throw new UnsupportedOperationException();
 		}
 
 		@Override
 		public int getArgb(int x, int y) {
-			throw new RuntimeException("getArgb not implemented");
+			throw new UnsupportedOperationException();
 		}
 
 		@Override
 		public <T extends Buffer> void getPixels(int x, int y, int w, int h, WritablePixelFormat<T> pixelformat,
 													T buffer, int scanlineStride) {
-			throw new RuntimeException("getPixels not implemented");
+			throw new UnsupportedOperationException();
 		}
 
 		@Override
 		public void getPixels(int x, int y, int w, int h, WritablePixelFormat<ByteBuffer> pixelformat,
 								byte[] buffer, int offset, int scanlineStride) {
-			throw new RuntimeException("getPixels not implemented");
+			throw new UnsupportedOperationException();
 		}
 
 		@Override
 		public void getPixels(int x, int y, int w, int h, WritablePixelFormat<IntBuffer> pixelformat,
 								int[] buffer, int offset, int scanlineStride) {
-			throw new RuntimeException("getPixels not implemented");
+			throw new UnsupportedOperationException();
 		}
 	}
 
