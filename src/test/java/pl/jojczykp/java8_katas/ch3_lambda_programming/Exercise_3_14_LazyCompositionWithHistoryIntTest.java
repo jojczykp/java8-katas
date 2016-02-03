@@ -5,8 +5,8 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyCompositionWithHistoryInt
-		.ComposedImageTransformer;
+import pl.jojczykp.java8_katas.ch3_lambda_programming
+		.Exercise_3_14_LazyCompositionWithHistoryInt.ComposedImageTransformer;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyCompositionWithHistoryInt.adapting;

@@ -47,7 +47,7 @@ public final class Exercise_3_13_LazyCompositionWithHistory {
 				prev = curr;
 				curr = temp;
 				for (int x = 0; x < width; x++) {
-					for (int y = 0; y < width; y++) {
+					for (int y = 0; y < height; y++) {
 						curr.getPixelWriter().setColor(x, y, operation.apply(prev, x, y));
 					}
 				}

@@ -16,7 +16,7 @@ public final class Exercise_3_8_PassingGeneralizingFunctions {
 		WritableImage out = new WritableImage(width, height);
 
 		for (int x = 0 ; x < width ; x++) {
-			for (int y = 0; y < width; y++) {
+			for (int y = 0; y < height; y++) {
 				out.getPixelWriter().setColor(x, y,
 						f.apply(x, y, in.getPixelReader().getColor(x, y)));
 			}

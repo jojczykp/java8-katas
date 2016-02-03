@@ -18,7 +18,7 @@ public final class Exercise_3_6_PassingParametrizedFunction {
 		WritableImage out = new WritableImage(width, height);
 
 		for (int x = 0 ; x < width ; x++) {
-			for (int y = 0; y < width; y++) {
+			for (int y = 0; y < height; y++) {
 				out.getPixelWriter().setColor(x, y,
 						f.apply(in.getPixelReader().getColor(x, y), arg));
 			}

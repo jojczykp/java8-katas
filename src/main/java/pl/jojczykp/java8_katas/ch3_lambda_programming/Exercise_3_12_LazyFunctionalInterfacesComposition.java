@@ -37,7 +37,7 @@ public final class Exercise_3_12_LazyFunctionalInterfacesComposition {
 			WritableImage out = new WritableImage(width, height);
 
 			for (int x = 0 ; x < width ; x++) {
-				for (int y = 0; y < width; y++) {
+				for (int y = 0; y < height; y++) {
 					Color newColor = image.getPixelReader().getColor(x, y);
 					for (ColorTransformer operation : operations) {
 						newColor = operation.apply(x, y, newColor);
