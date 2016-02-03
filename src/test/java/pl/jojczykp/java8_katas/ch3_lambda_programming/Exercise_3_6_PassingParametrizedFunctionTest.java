@@ -22,8 +22,8 @@ public class Exercise_3_6_PassingParametrizedFunctionTest {
 
 	@Test
 	public void shouldSetOpacity() {
-		Image normal = anImageFromResource("ch3_lambda_programming/imageUnframed.png");
-		Image withOpacityChanged = anImageFromResource("ch3_lambda_programming/imageWithHalfOpacity.png");
+		Image normal = anImageFromResource("ch3_lambda_programming/image.png");
+		Image expected = anImageFromResource("ch3_lambda_programming/imageWithHalfOpacity.png");
 
 		Image transformed = transform(normal,
 				(Color oldColor, Double newOpacity) -> new Color(
@@ -33,7 +33,7 @@ public class Exercise_3_6_PassingParametrizedFunctionTest {
 						newOpacity),
 				NEW_OPACITY);
 
-		assertThat(transformed, isEqualPixelByPixelTo(withOpacityChanged));
+		assertThat(transformed, isEqualPixelByPixelTo(expected));
 	}
 
 }

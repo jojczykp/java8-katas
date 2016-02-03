@@ -24,16 +24,16 @@ public class Exercise_3_8_PassingGeneralizingFunctionsTest {
 
 	@Test
 	public void shouldPaintFrame() {
-		Image unframed = anImageFromResource("ch3_lambda_programming/imageUnframed.png");
-		Image framed = anImageFromResource("ch3_lambda_programming/imageFramed.png");
+		Image normal = anImageFromResource("ch3_lambda_programming/image.png");
+		Image expected = anImageFromResource("ch3_lambda_programming/imageFramed.png");
 
-		int imgWidth = (int) unframed.getWidth();
-		int imgHeight = (int) unframed.getHeight();
+		int imgWidth = (int) normal.getWidth();
+		int imgHeight = (int) normal.getHeight();
 
-		Image transformed = transform(unframed,
+		Image transformed = transform(normal,
 				addingFrame(imgWidth, imgHeight, FRAME_COLOR, FRAME_THICKNESS));
 
-		assertThat(transformed, isEqualPixelByPixelTo(framed));
+		assertThat(transformed, isEqualPixelByPixelTo(expected));
 	}
 
 }

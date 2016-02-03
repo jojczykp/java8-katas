@@ -26,19 +26,19 @@ public class Exercise_3_13_LazyCompositionWithHistoryTest {
 
 	@Test
 	public void shouldPaintDarkWithFrame() {
-		Image unframed = anImageFromResource("ch3_lambda_programming/imageUnframed.png");
-		Image blurred = anImageFromResource("ch3_lambda_programming/imageDarkFramedBlurred.png");
+		Image normal = anImageFromResource("ch3_lambda_programming/image.png");
+		Image expected = anImageFromResource("ch3_lambda_programming/imageDarkFramedBlurred.png");
 
-		int width = (int) unframed.getWidth();
-		int height = (int) unframed.getHeight();
+		int width = (int) normal.getWidth();
+		int height = (int) normal.getHeight();
 
-		Image transformed = ComposedImageTransformer.from(unframed)
+		Image transformed = ComposedImageTransformer.from(normal)
 				.transform(adapting(Color::darker))
 				.transform(adapting(addingFrame(width, height, FRAME_COLOR, FRAME_THICKNESS)))
 				.transform(blurring())
 				.toImage();
 
-		assertThat(transformed, isEqualPixelByPixelTo(blurred));
+		assertThat(transformed, isEqualPixelByPixelTo(expected));
 	}
 
 }

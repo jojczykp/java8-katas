@@ -28,17 +28,17 @@ public class Exercise_3_12_LazyFunctionalInterfacesCompositionTest {
 
 	@Test
 	public void shouldPaintDarkWithFrame() {
-		Image unframed = anImageFromResource("ch3_lambda_programming/imageUnframed.png");
-		Image darkWithFrame = anImageFromResource("ch3_lambda_programming/imageDarkWithFrame.png");
+		Image normal = anImageFromResource("ch3_lambda_programming/image.png");
+		Image expected = anImageFromResource("ch3_lambda_programming/imageDarkWithFrame.png");
 
-		Image transformed = ComposedColorTransformer.from(unframed)
+		Image transformed = ComposedColorTransformer.from(normal)
 				.transform(adapting(Color::darker))
 				.transform(addingFrame(
-						(int) unframed.getWidth(), (int) unframed.getHeight(),
+						(int) normal.getWidth(), (int) normal.getHeight(),
 						FRAME_COLOR, FRAME_THICKNESS))
 				.toImage();
 
-		assertThat(transformed, isEqualPixelByPixelTo(darkWithFrame));
+		assertThat(transformed, isEqualPixelByPixelTo(expected));
 	}
 
 }

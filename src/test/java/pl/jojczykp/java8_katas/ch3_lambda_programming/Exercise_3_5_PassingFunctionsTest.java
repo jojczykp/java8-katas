@@ -23,19 +23,19 @@ public class Exercise_3_5_PassingFunctionsTest {
 
 	@Test
 	public void shouldPaintFrame() {
-		Image unframed = anImageFromResource("ch3_lambda_programming/imageUnframed.png");
-		Image framed = anImageFromResource("ch3_lambda_programming/imageFramed.png");
+		Image normal = anImageFromResource("ch3_lambda_programming/image.png");
+		Image expected = anImageFromResource("ch3_lambda_programming/imageFramed.png");
 
-		int width = (int) unframed.getWidth();
-		int height = (int) unframed.getHeight();
+		int width = (int) normal.getWidth();
+		int height = (int) normal.getHeight();
 
-		Image transformed = transform(unframed,
+		Image transformed = transform(normal,
 				color -> FRAME_COLOR,
 				(x, y) ->
 						x < FRAME_THICKNESS || x >= width - FRAME_THICKNESS ||
 						y < FRAME_THICKNESS || y >= height - FRAME_THICKNESS);
 
-		assertThat(transformed, isEqualPixelByPixelTo(framed));
+		assertThat(transformed, isEqualPixelByPixelTo(expected));
 	}
 
 }

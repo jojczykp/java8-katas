@@ -28,10 +28,10 @@ public class Exercise_3_14_LazyCompositionWithHistoryIntTest {
 
 	@Test
 	public void shouldPaintDarkWithFrame() {
-		Image unframed = anImageFromResource("ch3_lambda_programming/imageUnframed.png");
+		Image normal = anImageFromResource("ch3_lambda_programming/image.png");
 		Image expected = anImageFromResource("ch3_lambda_programming/imageDarkFramedBlurredMirrored.png");
 
-		Image transformed = ComposedImageTransformer.from(unframed)
+		Image transformed = ComposedImageTransformer.from(normal)
 				.transform(adapting(Color::darker))
 				.transform(addingFrame(FRAME_COLOR, FRAME_THICKNESS))
 				.transform(blurring())
