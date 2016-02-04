@@ -16,7 +16,7 @@ Technologies
 
 Other Concepts
 --------------
- * TDD (JUnit, Hamcrest)
+ * TDD (JUnit, Hamcrest, Mockito)
  * Checkstyle, Findbugs, PMD, JaCoCo
  * CleanCode
 
