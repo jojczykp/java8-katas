@@ -14,6 +14,8 @@ public final class Exercise_1_6_UncheckExceptionWrapper {
 		};
 	}
 
+	@FunctionalInterface
+	@SuppressWarnings("PMD.SignatureDeclareThrowsException")
 	public interface RunnableEx {
 		void run() throws Exception;
 	}

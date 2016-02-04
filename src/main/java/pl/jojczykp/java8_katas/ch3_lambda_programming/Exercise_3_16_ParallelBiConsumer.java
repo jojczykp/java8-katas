@@ -8,14 +8,14 @@ public final class Exercise_3_16_ParallelBiConsumer {
 	private Exercise_3_16_ParallelBiConsumer() {
 	}
 
-	public static <T> void doInOrderAsync(Supplier<T> supplier, BiConsumer<T, Throwable> consumer) {
+	public static <T> void doInOrderAsync(Supplier<T> supplier, BiConsumer<T, Exception> consumer) {
 		Thread t = new Thread() {
 			public void run() {
 				try {
 					T result = supplier.get();
 					consumer.accept(result, null);
-				} catch (Throwable t) {
-					consumer.accept(null, t);
+				} catch (Exception e) {
+					consumer.accept(null, e);
 				}
 			}
 		};

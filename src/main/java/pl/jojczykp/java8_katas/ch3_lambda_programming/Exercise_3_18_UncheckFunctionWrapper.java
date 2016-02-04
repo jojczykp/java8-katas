@@ -7,6 +7,7 @@ public final class Exercise_3_18_UncheckFunctionWrapper {
 	private Exercise_3_18_UncheckFunctionWrapper() {}
 
 	@FunctionalInterface
+	@SuppressWarnings("PMD.SignatureDeclareThrowsException")
 	public interface FunctionEx<T, U> {
 		U apply(T t) throws Exception;
 	}

@@ -19,17 +19,17 @@ public class Exercise_3_16_ParallelBiConsumerTest {
 		final int denominator = 2;
 
 		AtomicReference<Integer> value = new AtomicReference<>();
-		AtomicReference<Throwable> throwable = new AtomicReference<>();
+		AtomicReference<Exception> exception = new AtomicReference<>();
 
 		doInOrderAsync(
 				() -> counter / denominator,
 				(v, t) -> {
 					value.set(v);
-					throwable.set(t);
+					exception.set(t);
 				});
 
 		assertThat(obtained(value), is(counter / denominator));
-		assertThat(throwable.get(), is(nullValue()));
+		assertThat(exception.get(), is(nullValue()));
 	}
 
 	@Test
@@ -38,16 +38,16 @@ public class Exercise_3_16_ParallelBiConsumerTest {
 		final int denominator = 0;
 
 		AtomicReference<Integer> value = new AtomicReference<>();
-		AtomicReference<Throwable> throwable = new AtomicReference<>();
+		AtomicReference<Exception> exception = new AtomicReference<>();
 
 		doInOrderAsync(
 				() -> counter / denominator,
 				(v, t) -> {
 					value.set(v);
-					throwable.set(t);
+					exception.set(t);
 				});
 
-		assertThat(obtained(throwable), is(instanceOf(ArithmeticException.class)));
+		assertThat(obtained(exception), is(instanceOf(ArithmeticException.class)));
 		assertThat(value.get(), is(nullValue()));
 	}
 

@@ -236,7 +236,7 @@
 	<rule ref="rulesets/java/imports.xml/DuplicateImports">
 		<priority>4</priority>
 	</rule>
-	<rule ref="rulesets/java/unnecessary.xml/EmptyStatementNotInLoop">
+	<rule ref="rulesets/java/empty.xml/EmptyStatementNotInLoop">
 		<priority>3</priority>
 	</rule>
 	<rule ref="rulesets/java/naming.xml/GenericsNaming">

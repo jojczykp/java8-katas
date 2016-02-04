@@ -8,14 +8,14 @@ public final class Exercise_3_17_ParallelRunnables {
 	}
 
 	public static void doInParallelAsync(Runnable first, Runnable second,
-										Consumer<Throwable> consumer) {
+										Consumer<Exception> consumer) {
 		Thread t = new Thread() {
 			public void run() {
 				try {
 					first.run();
 					second.run();
-				} catch (Throwable t) {
-					consumer.accept(t);
+				} catch (Exception e) {
+					consumer.accept(e);
 				}
 			}
 		};
