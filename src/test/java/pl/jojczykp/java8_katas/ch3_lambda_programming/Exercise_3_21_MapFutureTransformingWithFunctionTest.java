@@ -3,12 +3,8 @@ package pl.jojczykp.java8_katas.ch3_lambda_programming;
 import org.junit.Test;
 
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 import static java.util.concurrent.Executors.newSingleThreadExecutor;
 import static java.util.concurrent.TimeUnit.SECONDS;
@@ -46,52 +42,6 @@ public class Exercise_3_21_MapFutureTransformingWithFunctionTest {
 		executorService.awaitTermination(1, SECONDS);
 
 		return future;
-	}
-
-	@Test
-	public void shouldReturnedFutureDelegateNonGetMethods() {
-		final AtomicBoolean invokedCancel = new AtomicBoolean();
-		final AtomicBoolean invokedIsCancelled = new AtomicBoolean();
-		final AtomicBoolean invokedIsDone = new AtomicBoolean();
-		final Future<Integer> delegateFuture = new Future<Integer>() {
-			@Override
-			public boolean cancel(boolean mayInterruptIfRunning) {
-				invokedCancel.set(true);
-				return false;
-			}
-
-			@Override
-			public boolean isCancelled() {
-				invokedIsCancelled.set(true);
-				return false;
-			}
-
-			@Override
-			public boolean isDone() {
-				invokedIsDone.set(true);
-				return false;
-			}
-
-			@Override
-			public Integer get() throws InterruptedException, ExecutionException {
-				return null;
-			}
-
-			@Override
-			public Integer get(long timeout, TimeUnit unit) throws InterruptedException,
-																ExecutionException, TimeoutException {
-				return null;
-			}
-		};
-		Future<String> mappedFuture = map(delegateFuture, Object::toString);
-
-		mappedFuture.cancel(true);
-		mappedFuture.isCancelled();
-		mappedFuture.isDone();
-
-		assertThat(invokedCancel.get(), is(true));
-		assertThat(invokedIsCancelled.get(), is(true));
-		assertThat(invokedIsDone.get(), is(true));
 	}
 
 }
