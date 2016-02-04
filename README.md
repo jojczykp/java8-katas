@@ -3,6 +3,7 @@ java8-katas
 
  A couple of lines of code implementing some exercises from Cay S. Horstmann's book
   "Java SE 8 for the Really Impatient" (Addison-Wesley 2014) 
+
         http://horstmann.com/java8/
 
  * Stream API
