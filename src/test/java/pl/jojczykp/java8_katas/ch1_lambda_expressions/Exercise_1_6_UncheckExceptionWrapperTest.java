@@ -1,29 +1,24 @@
 package pl.jojczykp.java8_katas.ch1_lambda_expressions;
 
 import org.junit.Test;
+import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise_1_6_UncheckExceptionWrapper.PackedCheckedException;
 
 import static pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise_1_6_UncheckExceptionWrapper.uncheck;
 
 public class Exercise_1_6_UncheckExceptionWrapperTest {
 
-	@Test
+	@Test(expected = PackedCheckedException.class)
 	public void shouldRepackCheckedExceptionToUnchecked() {
-		new Thread(uncheck(() ->
-				codeThrowingCheckedExceptionConditionally(true)
-		)).start();
+		uncheck(() -> {
+				throw new SomeCheckedException("Ooops!");
+		}).run();
 	}
 
 	@Test
 	public void shouldProcessIfNoException() {
-		new Thread(uncheck(() ->
-				codeThrowingCheckedExceptionConditionally(false)
-		)).start();
-	}
-
-	private void codeThrowingCheckedExceptionConditionally(boolean shouldThrow) throws SomeCheckedException {
-		if (shouldThrow) {
-			throw new SomeCheckedException("Ooops!");
-		}
+		uncheck(() -> {
+			/* Some code that does not throw exception */
+		}).run();
 	}
 
 	private class SomeCheckedException extends Exception {
