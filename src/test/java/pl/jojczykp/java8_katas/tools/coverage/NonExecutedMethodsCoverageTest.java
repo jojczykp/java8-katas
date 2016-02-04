@@ -1,4 +1,4 @@
-package pl.jojczykp.java8_katas.tools;
+package pl.jojczykp.java8_katas.tools.coverage;
 
 import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritablePixelFormat;

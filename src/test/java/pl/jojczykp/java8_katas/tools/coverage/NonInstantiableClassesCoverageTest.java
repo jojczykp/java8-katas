@@ -1,4 +1,4 @@
-package pl.jojczykp.java8_katas.tools;
+package pl.jojczykp.java8_katas.tools.coverage;
 
 import org.junit.Test;
 import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise_1_6_UncheckExceptionWrapper;
