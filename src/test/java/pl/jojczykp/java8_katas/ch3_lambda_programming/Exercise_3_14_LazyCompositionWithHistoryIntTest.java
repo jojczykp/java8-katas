@@ -10,7 +10,7 @@ import pl.jojczykp.java8_katas.ch3_lambda_programming
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyCompositionWithHistoryInt.adapting;
-import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyCompositionWithHistoryInt.addingFrame;
+import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyCompositionWithHistoryInt.framing;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyCompositionWithHistoryInt.blurring;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyCompositionWithHistoryInt.mirroring;
 import static pl.jojczykp.java8_katas.tools.ImageTools.anImageFromResource;
@@ -33,7 +33,7 @@ public class Exercise_3_14_LazyCompositionWithHistoryIntTest {
 
 		Image transformed = ComposedImageTransformer.from(normal)
 				.transform(adapting(Color::darker))
-				.transform(addingFrame(FRAME_COLOR, FRAME_THICKNESS))
+				.transform(framing(FRAME_COLOR, FRAME_THICKNESS))
 				.transform(blurring())
 				.transform(mirroring())
 				.toImage();

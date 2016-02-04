@@ -25,7 +25,7 @@ public final class Exercise_3_8_PassingGeneralizingFunctions {
 		return out;
 	}
 
-	public static ColorTransformer addingFrame(
+	public static ColorTransformer framing(
 			int imgWidth, int imgHeight, Color frameColor, int frameThickness) {
 		return (x, y, currentColor) ->
 				(x < frameThickness || x >= imgWidth - frameThickness ||

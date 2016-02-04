@@ -100,7 +100,7 @@ public final class Exercise_3_13_LazyCompositionWithHistory {
 		Color apply(int x, int y, Color in);
 	}
 
-	public static ColorTransformer addingFrame(
+	public static ColorTransformer framing(
 			int imgWidth, int imgHeight, Color frameColor, int frameThickness) {
 		return (x, y, currentColor) ->
 				(x < frameThickness || x >= imgWidth - frameThickness ||

@@ -12,7 +12,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming
 		.Exercise_3_12_LazyFunctionalInterfacesComposition.adapting;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming
-		.Exercise_3_12_LazyFunctionalInterfacesComposition.addingFrame;
+		.Exercise_3_12_LazyFunctionalInterfacesComposition.framing;
 import static pl.jojczykp.java8_katas.tools.ImageTools.anImageFromResource;
 import static pl.jojczykp.java8_katas.tools.IsEqualPixelByPixelTo.isEqualPixelByPixelTo;
 
@@ -33,7 +33,7 @@ public class Exercise_3_12_LazyFunctionalInterfacesCompositionTest {
 
 		Image transformed = ComposedColorTransformer.from(normal)
 				.transform(adapting(Color::darker))
-				.transform(addingFrame(
+				.transform(framing(
 						(int) normal.getWidth(), (int) normal.getHeight(),
 						FRAME_COLOR, FRAME_THICKNESS))
 				.toImage();

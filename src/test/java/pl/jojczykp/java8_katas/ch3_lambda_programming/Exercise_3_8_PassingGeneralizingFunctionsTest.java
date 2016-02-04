@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_8_PassingGeneralizingFunctions.addingFrame;
+import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_8_PassingGeneralizingFunctions.framing;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_8_PassingGeneralizingFunctions.transform;
 import static pl.jojczykp.java8_katas.tools.ImageTools.anImageFromResource;
 import static pl.jojczykp.java8_katas.tools.IsEqualPixelByPixelTo.isEqualPixelByPixelTo;
@@ -31,7 +31,7 @@ public class Exercise_3_8_PassingGeneralizingFunctionsTest {
 		int imgHeight = (int) normal.getHeight();
 
 		Image transformed = transform(normal,
-				addingFrame(imgWidth, imgHeight, FRAME_COLOR, FRAME_THICKNESS));
+				framing(imgWidth, imgHeight, FRAME_COLOR, FRAME_THICKNESS));
 
 		assertThat(transformed, isEqualPixelByPixelTo(expected));
 	}

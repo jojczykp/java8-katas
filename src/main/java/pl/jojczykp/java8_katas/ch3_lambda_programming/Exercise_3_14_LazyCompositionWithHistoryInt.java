@@ -36,7 +36,7 @@ public final class Exercise_3_14_LazyCompositionWithHistoryInt {
 		return (reader, width, height, x, y) -> op.apply(reader.getColor(x, y));
 	}
 
-	public static ImageTransformer addingFrame(Color frameColor, int frameThickness) {
+	public static ImageTransformer framing(Color frameColor, int frameThickness) {
 		return (reader, width, height, x, y) ->
 				(x < frameThickness || x >= width - frameThickness ||
 						y < frameThickness || y >= height - frameThickness) ?
