@@ -11,7 +11,8 @@ import static org.mockito.Mockito.when;
 
 public final class MockingFilesTools {
 
-	private MockingFilesTools() {}
+	private MockingFilesTools() {
+	}
 
 	public static File aFile(String name) {
 		File file = mock(File.class);

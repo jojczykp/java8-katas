@@ -9,11 +9,9 @@ import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_16_ParallelBiConsumer.doInOrderAsync;
+import static pl.jojczykp.java8_katas.tools.ParallelTools.obtained;
 
 public class Exercise_3_16_ParallelBiConsumerTest {
-
-	private static final int MAX_OBTAIN_ATTEMPTS = 10;
-	private static final int OBTAINING_TIMEOUT = 100;
 
 	@Test
 	public void shouldReturnResultOnCorrectCalculation() {
@@ -51,20 +49,6 @@ public class Exercise_3_16_ParallelBiConsumerTest {
 
 		assertThat(obtained(throwable), is(instanceOf(ArithmeticException.class)));
 		assertThat(value.get(), is(nullValue()));
-	}
-
-	private <T> T obtained(AtomicReference<T> ref) {
-		try {
-			int count = 0;
-			T result = ref.get();
-			while (result == null && count++ < MAX_OBTAIN_ATTEMPTS - 1) {
-				Thread.sleep(OBTAINING_TIMEOUT);
-				result = ref.get();
-			}
-			return result;
-		} catch (InterruptedException e) {
-			throw new RuntimeException(e);
-		}
 	}
 
 }
