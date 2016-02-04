@@ -8,9 +8,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
-import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_16_ParallelRunnables.doInOrderAsync;
+import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_16_ParallelBiConsumer.doInOrderAsync;
 
-public class Exercise_3_16_ParallelRunnablesTest {
+public class Exercise_3_16_ParallelBiConsumerTest {
 
 	private static final int MAX_OBTAIN_ATTEMPTS = 10;
 	private static final int OBTAINING_TIMEOUT = 100;
