@@ -96,9 +96,9 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-					<!--<compilerArgs>-->
-						<!--<arg>-Xlint</arg>-->
-					<!--</compilerArgs>-->
+					<compilerArgs>
+						<arg>-Xlint:all</arg>
+					</compilerArgs>
 				</configuration>
 			</plugin>
 
