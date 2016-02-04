@@ -11,7 +11,7 @@ import java.nio.Buffer;
 
 import static java.util.Arrays.stream;
 
-public class NonExecutableMethodsCoverageTest {
+public class NonExecutedMethodsCoverageTest {
 
 	@Test
 	public void shouldHaveUnsupportedMethodsInPixelReaderCache() {

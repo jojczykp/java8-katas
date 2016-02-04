@@ -15,6 +15,7 @@ import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_16_ParallelBiCo
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_17_ParallelRunnables;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_18_UncheckFunctionWrapper;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_20_MapListTransformingWithFunction;
+import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_21_MapFutureTransformingWithFunction;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_5_PassingFunctions;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_6_PassingParametrizedFunction;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_8_PassingGeneralizingFunctions;
@@ -46,6 +47,7 @@ public class NonInstantiableClassesCoverageTest {
 		shouldHavePrivateSoleConstructor(Exercise_3_17_ParallelRunnables.class);
 		shouldHavePrivateSoleConstructor(Exercise_3_18_UncheckFunctionWrapper.class);
 		shouldHavePrivateSoleConstructor(Exercise_3_20_MapListTransformingWithFunction.class);
+		shouldHavePrivateSoleConstructor(Exercise_3_21_MapFutureTransformingWithFunction.class);
 	}
 
 	private <T> void shouldHavePrivateSoleConstructor(Class<T> clazz) throws Exception {
