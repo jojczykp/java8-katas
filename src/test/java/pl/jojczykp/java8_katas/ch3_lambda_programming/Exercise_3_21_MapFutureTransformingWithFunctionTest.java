@@ -2,11 +2,11 @@ package pl.jojczykp.java8_katas.ch3_lambda_programming;
 
 import org.junit.Test;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
+import java.util.function.Supplier;
 
-import static java.util.concurrent.Executors.newSingleThreadExecutor;
+import static java.util.concurrent.CompletableFuture.supplyAsync;
+import static java.util.concurrent.ForkJoinPool.commonPool;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -19,7 +19,8 @@ public class Exercise_3_21_MapFutureTransformingWithFunctionTest {
 
 	@Test
 	public void shouldMapFutureTranformingWithFunctionUnparametrizedGet() throws Exception {
-		Future<Integer> future = evaluateTask(() -> SAMPLE_VALUE);
+		Supplier<Integer> task = () -> SAMPLE_VALUE;
+		Future<Integer> future = supplyAsync(task, commonPool());
 
 		String result = map(future, Object::toString).get();
 
@@ -28,20 +29,12 @@ public class Exercise_3_21_MapFutureTransformingWithFunctionTest {
 
 	@Test
 	public void shouldMapFutureTranformingWithFunctionParametrizedGet() throws Exception {
-		Future<Integer> future = evaluateTask(() -> SAMPLE_VALUE);
+		Supplier<Integer> task = () -> SAMPLE_VALUE;
+		Future<Integer> future = supplyAsync(task, commonPool());
 
 		String result = map(future, Object::toString).get(1, SECONDS);
 
 		assertThat(result, is(equalTo(SAMPLE_VALUE.toString())));
-	}
-
-	private Future<Integer> evaluateTask(Callable<Integer> task) throws InterruptedException {
-		ExecutorService executorService = newSingleThreadExecutor();
-		Future<Integer> future = executorService.submit(task);
-		executorService.shutdown();
-		executorService.awaitTermination(1, SECONDS);
-
-		return future;
 	}
 
 }
