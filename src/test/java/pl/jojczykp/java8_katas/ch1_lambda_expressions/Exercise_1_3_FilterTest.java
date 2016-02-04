@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.is;
 import static pl.jojczykp.java8_katas.tools.MockingFilesTools.aDir;
 import static pl.jojczykp.java8_katas.tools.MockingFilesTools.aFile;
 
-public class Exercise_1_3FilterTest {
+public class Exercise_1_3_FilterTest {
 
 	private Exercise_1_3_Filter testee = new Exercise_1_3_Filter();
 
