@@ -13,6 +13,7 @@ import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyComposit
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_15_LazyParallel;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_16_ParallelBiConsumer;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_17_ParallelRunnables;
+import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_18_UncheckFunctionWrapper;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_5_PassingFunctions;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_6_PassingParametrizedFunction;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_8_PassingGeneralizingFunctions;
@@ -42,6 +43,7 @@ public class NonInstantiableClassesCoverageTest {
 		shouldHavePrivateSoleConstructor(Exercise_3_15_LazyParallel.class);
 		shouldHavePrivateSoleConstructor(Exercise_3_16_ParallelBiConsumer.class);
 		shouldHavePrivateSoleConstructor(Exercise_3_17_ParallelRunnables.class);
+		shouldHavePrivateSoleConstructor(Exercise_3_18_UncheckFunctionWrapper.class);
 	}
 
 	private <T> void shouldHavePrivateSoleConstructor(Class<T> clazz) throws Exception {
