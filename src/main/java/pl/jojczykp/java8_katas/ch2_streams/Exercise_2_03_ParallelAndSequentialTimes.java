@@ -1,7 +1,11 @@
 package pl.jojczykp.java8_katas.ch2_streams;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Collection;
 import java.util.function.Supplier;
+
+import static java.time.Instant.now;
 
 public class Exercise_2_03_ParallelAndSequentialTimes {
 
@@ -32,11 +36,11 @@ public class Exercise_2_03_ParallelAndSequentialTimes {
 	}
 
 	private <T> long durationOf(Supplier<T> block) {
-		long beg = System.currentTimeMillis();
+		Instant beg = now();
 		block.get();
-		long end = System.currentTimeMillis();
+		Instant end = now();
 
-		return (end - beg);
+		return Duration.between(beg, end).toMillis();
 	}
 
 }
