@@ -21,6 +21,7 @@ import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_05_PassingFunct
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_06_PassingParametrizedFunction;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_08_PassingGeneralizingFunctions;
 import pl.jojczykp.java8_katas.ch5_date_time.Exercise_5_02_AdjusterGeneration;
+import pl.jojczykp.java8_katas.ch5_date_time.Exercise_5_08_TimeZonesOffsets;
 
 import java.lang.reflect.Constructor;
 import java.util.concurrent.ExecutionException;
@@ -57,6 +58,7 @@ public class NonInstantiableClassesCoverageTest {
 		shouldHavePrivateSoleConstructor(Exercise_3_21_MapFutureTransformingWithFunction.class);
 		shouldHavePrivateSoleConstructor(Exercise_3_23_MapPair.class);
 		shouldHavePrivateSoleConstructor(Exercise_5_02_AdjusterGeneration.class);
+		shouldHavePrivateSoleConstructor(Exercise_5_08_TimeZonesOffsets.class);
 	}
 
 	private <T> void shouldHavePrivateSoleConstructor(Class<T> clazz) throws Exception {
