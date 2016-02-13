@@ -48,11 +48,11 @@ public class Exercise_6_03_LongAdderVsAtomicLong {
 		return Duration.between(beg, end);
 	}
 
-	private void awaitFor(CountDownLatch barrier) {
+	private static void awaitFor(CountDownLatch barrier) {
 		uncheck(() -> barrier.await(1, SECONDS)).run();
 	}
 
-	private void awaitFor(ExecutorService pool) {
+	private static void awaitFor(ExecutorService pool) {
 		pool.shutdown();
 		uncheck(() -> pool.awaitTermination(1, MINUTES)).run();
 	}
