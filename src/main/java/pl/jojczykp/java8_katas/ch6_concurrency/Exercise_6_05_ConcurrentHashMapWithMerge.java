@@ -22,6 +22,7 @@ public class Exercise_6_05_ConcurrentHashMapWithMerge {
 	private static final String WORDS_SEPARATOR = "\\W+";
 	private static final int N_THREADS = 10;
 
+
 	public Map<String, Set<File>> mapWordsToFileSets(File root) {
 		Map<String, Set<File>> result = new ConcurrentHashMap<>();
 		ExecutorService pool = newFixedThreadPool(N_THREADS);
