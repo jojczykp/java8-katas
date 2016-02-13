@@ -1,17 +1,11 @@
 package pl.jojczykp.java8_katas.ch6_concurrency;
 
+import pl.jojczykp.java8_katas.tools.BarrieredExecutor;
+
 import java.time.Duration;
 import java.time.Instant;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.LongAdder;
-
-import static java.util.concurrent.CompletableFuture.runAsync;
-import static java.util.concurrent.Executors.newFixedThreadPool;
-import static java.util.concurrent.TimeUnit.MINUTES;
-import static java.util.concurrent.TimeUnit.SECONDS;
-import static pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise_1_6_UncheckExceptionWrapper.uncheck;
 
 
 public class Exercise_6_03_LongAdderVsAtomicLong {
@@ -27,34 +21,22 @@ public class Exercise_6_03_LongAdderVsAtomicLong {
 	}
 
 	public Duration getExecutionDuration(int nThreads, int nIncrements, Runnable action, Runnable after) {
-		CountDownLatch barrier = new CountDownLatch(1);
-		ExecutorService pool = newFixedThreadPool(nThreads);
+		BarrieredExecutor executor = new BarrieredExecutor(nThreads);
 
 		for (int t = 0 ; t < nThreads ; t++) {
-			runAsync(() -> {
-				awaitFor(barrier);
+			executor.addTask(() -> {
 				for (int i = 0; i < nIncrements; i++) {
 					action.run();
 				}
-			}, pool);
+			});
 		}
 
 		Instant beg = Instant.now();
-		barrier.countDown();
-		awaitFor(pool);
+		executor.execute();
 		after.run();
 		Instant end = Instant.now();
 
 		return Duration.between(beg, end);
-	}
-
-	private static void awaitFor(CountDownLatch barrier) {
-		uncheck(() -> barrier.await(1, SECONDS)).run();
-	}
-
-	private static void awaitFor(ExecutorService pool) {
-		pool.shutdown();
-		uncheck(() -> pool.awaitTermination(1, MINUTES)).run();
 	}
 
 }

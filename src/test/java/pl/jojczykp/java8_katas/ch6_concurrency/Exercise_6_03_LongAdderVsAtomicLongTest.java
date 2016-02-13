@@ -16,7 +16,7 @@ public class Exercise_6_03_LongAdderVsAtomicLongTest {
 	private Exercise_6_03_LongAdderVsAtomicLong testee = new Exercise_6_03_LongAdderVsAtomicLong();
 
 	@Test
-	public void shouldTrackLongestWord() throws InterruptedException {
+	public void shouldLongAdderBeMoreEfficientThanAtomicLong() {
 		Duration atomicLongDuration = testee.getAtomicLongIncrementDuration(N_THREADS, N_INCREMENTS);
 		Duration longAdderDuration = testee.getLongAdderIncrementDuration(N_THREADS, N_INCREMENTS);
 
