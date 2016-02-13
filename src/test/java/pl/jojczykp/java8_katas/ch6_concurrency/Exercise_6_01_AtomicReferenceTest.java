@@ -13,6 +13,7 @@ import static java.util.stream.Collectors.toList;
 import static java.util.stream.IntStream.range;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+import static pl.jojczykp.java8_katas.test_tools.StringTools.longerOf;
 
 public class Exercise_6_01_AtomicReferenceTest {
 
@@ -38,11 +39,6 @@ public class Exercise_6_01_AtomicReferenceTest {
 
 		assertThat(currentLongest.get(), is(generator.getLongest()));
 	}
-
-	private static String longerOf(String s1, String s2) {
-		return s1.length() >= s2.length() ? s1 : s2;
-	}
-
 
 	private static class StringsGenerator {
 		private List<String> strings;
