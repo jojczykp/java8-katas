@@ -13,8 +13,8 @@ import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyC
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyCompositionWithHistoryInt.framing;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyCompositionWithHistoryInt.blurring;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyCompositionWithHistoryInt.mirroring;
-import static pl.jojczykp.java8_katas.tools.ImageTools.anImageFromResource;
-import static pl.jojczykp.java8_katas.tools.IsEqualPixelByPixelTo.isEqualPixelByPixelTo;
+import static pl.jojczykp.java8_katas.test_tools.ImageTools.anImageFromResource;
+import static pl.jojczykp.java8_katas.test_tools.IsEqualPixelByPixelTo.isEqualPixelByPixelTo;
 
 public class Exercise_3_14_LazyCompositionWithHistoryIntTest {
 

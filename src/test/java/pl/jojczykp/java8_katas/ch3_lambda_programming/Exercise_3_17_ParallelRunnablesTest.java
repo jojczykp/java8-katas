@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_17_ParallelRunnables.doInParallelAsync;
-import static pl.jojczykp.java8_katas.tools.ParallelTools.obtained;
+import static pl.jojczykp.java8_katas.test_tools.ParallelTools.obtained;
 
 public final class Exercise_3_17_ParallelRunnablesTest {
 

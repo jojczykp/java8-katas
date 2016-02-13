@@ -1,4 +1,4 @@
-package pl.jojczykp.java8_katas.tools.coverage;
+package pl.jojczykp.java8_katas.test_tools.missing_coverage;
 
 import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritablePixelFormat;

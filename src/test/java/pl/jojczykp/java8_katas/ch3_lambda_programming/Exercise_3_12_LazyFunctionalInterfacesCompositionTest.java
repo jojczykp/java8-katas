@@ -13,8 +13,8 @@ import static pl.jojczykp.java8_katas.ch3_lambda_programming
 		.Exercise_3_12_LazyFunctionalInterfacesComposition.adapting;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming
 		.Exercise_3_12_LazyFunctionalInterfacesComposition.framing;
-import static pl.jojczykp.java8_katas.tools.ImageTools.anImageFromResource;
-import static pl.jojczykp.java8_katas.tools.IsEqualPixelByPixelTo.isEqualPixelByPixelTo;
+import static pl.jojczykp.java8_katas.test_tools.ImageTools.anImageFromResource;
+import static pl.jojczykp.java8_katas.test_tools.IsEqualPixelByPixelTo.isEqualPixelByPixelTo;
 
 public class Exercise_3_12_LazyFunctionalInterfacesCompositionTest {
 

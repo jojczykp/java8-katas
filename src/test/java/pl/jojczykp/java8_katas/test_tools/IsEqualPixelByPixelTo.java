@@ -1,4 +1,4 @@
-package pl.jojczykp.java8_katas.tools;
+package pl.jojczykp.java8_katas.test_tools;
 
 import javafx.scene.image.Image;
 import org.hamcrest.BaseMatcher;

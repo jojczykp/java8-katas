@@ -9,8 +9,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.is;
-import static pl.jojczykp.java8_katas.tools.MockingFilesTools.aDir;
-import static pl.jojczykp.java8_katas.tools.MockingFilesTools.aFile;
+import static pl.jojczykp.java8_katas.test_tools.MockingFilesTools.aDir;
+import static pl.jojczykp.java8_katas.test_tools.MockingFilesTools.aFile;
 
 public class Exercise_1_4_FilterMapCollectTest {
 

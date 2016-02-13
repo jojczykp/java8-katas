@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_16_ParallelBiConsumer.doInOrderAsync;
-import static pl.jojczykp.java8_katas.tools.ParallelTools.obtained;
+import static pl.jojczykp.java8_katas.test_tools.ParallelTools.obtained;
 
 public class Exercise_3_16_ParallelBiConsumerTest {
 
