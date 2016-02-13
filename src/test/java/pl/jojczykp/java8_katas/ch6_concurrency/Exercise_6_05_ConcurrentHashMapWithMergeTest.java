@@ -17,11 +17,24 @@ public class Exercise_6_05_ConcurrentHashMapWithMergeTest {
 	private Exercise_6_05_ConcurrentHashMapWithMerge testee = new Exercise_6_05_ConcurrentHashMapWithMerge();
 
 	@Test
-	public void shouldMapWordsToFileSets() throws URISyntaxException {
-		File root = new File(getClass().getClassLoader().getResource("ch6_concurrency").toURI());
+	public void shouldMapWordsToFileSets() {
+		File root = getRoot();
 
-		Map<String, Set<File>> result = testee.mapWordsToFileSets(root);
+		Map<String, Set<File>> result = testee.mapWordsToFileSetsWithMerge(root);
 
+		assertThatWordsMappedToFiles(root, result);
+	}
+
+	static File getRoot() {
+		try {
+			return new File(Exercise_6_05_ConcurrentHashMapWithMergeTest.class
+							.getClassLoader().getResource("ch6_concurrency").toURI());
+		} catch (URISyntaxException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	static void assertThatWordsMappedToFiles(File root, Map<String, Set<File>> result) {
 		assertThat(result.keySet(), containsInAnyOrder("Alice", "has", "a", "cat", "1", "2", "3"));
 		assertThat(result.get("Alice"), occursInAllFiles(root));
 		assertThat(result.get("has"), occursInAllFiles(root));
@@ -32,7 +45,7 @@ public class Exercise_6_05_ConcurrentHashMapWithMergeTest {
 		assertThat(result.get("3"), occursOnlyInFile(root, "WordsFile3.txt"));
 	}
 
-	private Matcher<Iterable<? extends File>> occursInAllFiles(File root) {
+	private static Matcher<Iterable<? extends File>> occursInAllFiles(File root) {
 		return containsInAnyOrder(
 				new File(root, "WordsFile1.txt"),
 				new File(root, "WordsFile2.txt"),
@@ -40,7 +53,7 @@ public class Exercise_6_05_ConcurrentHashMapWithMergeTest {
 		);
 	}
 
-	private Matcher<? super Set<File>> occursOnlyInFile(File root, String name) {
+	private static Matcher<? super Set<File>> occursOnlyInFile(File root, String name) {
 		return contains(new File(root, name));
 	}
 
