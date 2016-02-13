@@ -32,11 +32,8 @@ public class BarrieredExecutor {
 
 	}
 
-	public void start() {
+	public void execute() {
 		barrier.countDown();
-	}
-
-	public void await() {
 		pool.shutdown();
 		uncheck(() -> pool.awaitTermination(1, TimeUnit.MINUTES)).run();
 	}

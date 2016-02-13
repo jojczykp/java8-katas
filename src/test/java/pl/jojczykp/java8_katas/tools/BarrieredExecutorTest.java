@@ -17,8 +17,7 @@ public class BarrieredExecutorTest {
 		Runnable task = () -> wasExecuted.set(true);
 
 		testee.addTask(task);
-		testee.start();
-		testee.await();
+		testee.execute();
 
 		assertThat(wasExecuted.get(), is(true));
 	}
