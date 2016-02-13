@@ -1,6 +1,7 @@
 package pl.jojczykp.java8_katas.tools;
 
 import org.junit.Test;
+import pl.jojczykp.java8_katas.tools.BarrieredExecutor.RunnableEx;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -9,12 +10,12 @@ import static org.hamcrest.Matchers.is;
 
 public class BarrieredExecutorTest {
 
-	private BarrieredExecutor testee = new BarrieredExecutor();
+	private BarrieredExecutor testee = new BarrieredExecutor(3);
 
 	@Test
 	public void shouldExecuteTaskIfStarted() {
 		AtomicBoolean wasExecuted = new AtomicBoolean(false);
-		Runnable task = () -> wasExecuted.set(true);
+		RunnableEx task = () -> wasExecuted.set(true);
 
 		testee.addTask(task);
 		testee.execute();
@@ -25,7 +26,7 @@ public class BarrieredExecutorTest {
 	@Test
 	public void shouldNotExecuteTaskIfNotStarted() {
 		AtomicBoolean wasExecuted = new AtomicBoolean(false);
-		Runnable task = () -> wasExecuted.set(true);
+		RunnableEx task = () -> wasExecuted.set(true);
 
 		testee.addTask(task);
 

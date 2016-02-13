@@ -10,21 +10,15 @@ import static pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise_1_6_Unchec
 
 public class BarrieredExecutor {
 
-	private static final int DEFAULT_N_THREADS = 10;
-
 	private CountDownLatch barrier;
 	private ExecutorService pool;
-
-	public BarrieredExecutor() {
-		this(DEFAULT_N_THREADS);
-	}
 
 	public BarrieredExecutor(int nThreads) {
 		pool = newFixedThreadPool(nThreads);
 		barrier = new CountDownLatch(1);
 	}
 
-	public void addTask(Runnable task) {
+	public void addTask(RunnableEx task) {
 		runAsync(uncheck(() -> {
 			barrier.await(1, TimeUnit.MINUTES);
 			task.run();
@@ -38,4 +32,9 @@ public class BarrieredExecutor {
 		uncheck(() -> pool.awaitTermination(1, TimeUnit.MINUTES)).run();
 	}
 
+	@FunctionalInterface
+	@SuppressWarnings("PMD.SignatureDeclareThrowsException")
+	public interface RunnableEx {
+		void run() throws Exception;
+	}
 }
