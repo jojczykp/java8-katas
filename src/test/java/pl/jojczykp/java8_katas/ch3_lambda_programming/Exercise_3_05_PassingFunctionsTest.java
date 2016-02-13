@@ -9,7 +9,7 @@ import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_05_PassingFunctions.transform;
 import static pl.jojczykp.java8_katas.test_tools.ImageTools.anImageFromResource;
-import static pl.jojczykp.java8_katas.test_tools.IsEqualPixelByPixelTo.isEqualPixelByPixelTo;
+import static pl.jojczykp.java8_katas.test_tools.IsEqualPixelByPixelToMatcher.isEqualPixelByPixelTo;
 
 public class Exercise_3_05_PassingFunctionsTest {
 

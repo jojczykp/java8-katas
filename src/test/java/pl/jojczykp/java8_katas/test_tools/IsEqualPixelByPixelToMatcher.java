@@ -8,18 +8,18 @@ import org.hamcrest.Matcher;
 
 import static java.util.stream.IntStream.range;
 
-public class IsEqualPixelByPixelTo extends BaseMatcher<Image> {
+public class IsEqualPixelByPixelToMatcher extends BaseMatcher<Image> {
 
 	@Factory
 	public static Matcher<? super Image> isEqualPixelByPixelTo(Image expected) {
-		return new IsEqualPixelByPixelTo(expected);
+		return new IsEqualPixelByPixelToMatcher(expected);
 	}
 
 	private Image expected;
 	private int width;
 	private int height;
 
-	public IsEqualPixelByPixelTo(Image expected) {
+	public IsEqualPixelByPixelToMatcher(Image expected) {
 		this.expected = expected;
 		this.width = (int) expected.getWidth();
 		this.height = (int) expected.getHeight();
