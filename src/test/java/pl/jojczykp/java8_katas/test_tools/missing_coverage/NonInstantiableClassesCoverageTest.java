@@ -7,6 +7,9 @@ import pl.jojczykp.java8_katas.ch1_lambda_expressions.Exercise_1_9_ForEachIf;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise_2_06_UseRangeToAccessArray;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise_2_07_CountClosesStream;
 import pl.jojczykp.java8_katas.ch2_streams.Exercise_2_08_Zip;
+import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_05_PassingFunctions;
+import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_06_PassingParametrizedFunction;
+import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_08_PassingGeneralizingFunctions;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_12_LazyFunctionalInterfacesComposition;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_13_LazyCompositionWithHistory;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_14_LazyCompositionWithHistoryInt;
@@ -17,12 +20,10 @@ import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_18_UncheckFunct
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_20_MapListTransformingWithFunction;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_21_MapFutureTransformingWithFunction;
 import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_23_MapPair;
-import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_05_PassingFunctions;
-import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_06_PassingParametrizedFunction;
-import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_08_PassingGeneralizingFunctions;
 import pl.jojczykp.java8_katas.ch5_date_time.Exercise_5_02_AdjusterGeneration;
 import pl.jojczykp.java8_katas.ch5_date_time.Exercise_5_08_TimeZonesOffsets;
 import pl.jojczykp.java8_katas.ch5_date_time.Exercise_5_09_TimeZonesOffsetsFractional;
+import pl.jojczykp.java8_katas.tools.SinglePageHttpClient;
 
 import java.lang.reflect.Constructor;
 import java.util.concurrent.ExecutionException;
@@ -61,6 +62,7 @@ public class NonInstantiableClassesCoverageTest {
 		shouldHavePrivateSoleConstructor(Exercise_5_02_AdjusterGeneration.class);
 		shouldHavePrivateSoleConstructor(Exercise_5_08_TimeZonesOffsets.class);
 		shouldHavePrivateSoleConstructor(Exercise_5_09_TimeZonesOffsetsFractional.class);
+		shouldHavePrivateSoleConstructor(SinglePageHttpClient.class);
 	}
 
 	private <T> void shouldHavePrivateSoleConstructor(Class<T> clazz) throws Exception {
