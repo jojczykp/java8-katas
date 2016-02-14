@@ -13,7 +13,7 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 import static pl.jojczykp.java8_katas.tools.SinglePageHttpClient.blockingReadPage;
 
 
-public class Exercise_6_10_CompletableFutureForSingleAction {
+public class Exercise_6_10_CompletableFutureForHttp {
 
 	private static final Pattern A_HREF_URL_PATTERN = Pattern.compile("<a\\s+href\\s*=\\s*(\\S*)\\s*>");
 	private static final int TIMEOUT_SEC = 3;

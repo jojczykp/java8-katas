@@ -10,13 +10,13 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 
-public class Exercise_6_10_CompletableFutureForSingleActionTest {
+public class Exercise_6_10_CompletableFutureForHttpTest {
 
 	private static final int PORT = 12345;
 
 	private SinglePageHttpServer server;
-	private Exercise_6_10_CompletableFutureForSingleAction testee =
-									new Exercise_6_10_CompletableFutureForSingleAction();
+	private Exercise_6_10_CompletableFutureForHttp testee =
+									new Exercise_6_10_CompletableFutureForHttp();
 
 	@Before
 	public void setupHttpServer() {
