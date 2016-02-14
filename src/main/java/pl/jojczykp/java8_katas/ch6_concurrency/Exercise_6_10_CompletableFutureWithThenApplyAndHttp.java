@@ -1,6 +1,5 @@
 package pl.jojczykp.java8_katas.ch6_concurrency;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -13,13 +12,13 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 import static pl.jojczykp.java8_katas.tools.SinglePageHttpClient.blockingReadPage;
 
 
-public class Exercise_6_10_CompletableFutureForHttp {
+public class Exercise_6_10_CompletableFutureWithThenApplyAndHttp {
 
 	private static final Pattern A_HREF_URL_PATTERN = Pattern.compile("<a\\s+href\\s*=\\s*(\\S*)\\s*>");
 	private static final int TIMEOUT_SEC = 3;
 
 	public List<String> getAllLinksFrom(String url)
-			throws IOException, ExecutionException, InterruptedException, TimeoutException {
+								throws InterruptedException, ExecutionException, TimeoutException {
 		return CompletableFuture.supplyAsync(() ->
 				blockingReadPage(url))
 				.thenApply(this::getLinks)

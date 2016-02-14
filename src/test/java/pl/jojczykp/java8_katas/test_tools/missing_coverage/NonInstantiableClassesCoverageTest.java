@@ -23,6 +23,7 @@ import pl.jojczykp.java8_katas.ch3_lambda_programming.Exercise_3_23_MapPair;
 import pl.jojczykp.java8_katas.ch5_date_time.Exercise_5_02_AdjusterGeneration;
 import pl.jojczykp.java8_katas.ch5_date_time.Exercise_5_08_TimeZonesOffsets;
 import pl.jojczykp.java8_katas.ch5_date_time.Exercise_5_09_TimeZonesOffsetsFractional;
+import pl.jojczykp.java8_katas.ch6_concurrency.Exercise_6_11_CompletableFutureWithThenCompose;
 import pl.jojczykp.java8_katas.tools.SinglePageHttpClient;
 
 import java.lang.reflect.Constructor;
@@ -62,6 +63,7 @@ public class NonInstantiableClassesCoverageTest {
 		shouldHavePrivateSoleConstructor(Exercise_5_02_AdjusterGeneration.class);
 		shouldHavePrivateSoleConstructor(Exercise_5_08_TimeZonesOffsets.class);
 		shouldHavePrivateSoleConstructor(Exercise_5_09_TimeZonesOffsetsFractional.class);
+		shouldHavePrivateSoleConstructor(Exercise_6_11_CompletableFutureWithThenCompose.class);
 		shouldHavePrivateSoleConstructor(SinglePageHttpClient.class);
 	}
 
